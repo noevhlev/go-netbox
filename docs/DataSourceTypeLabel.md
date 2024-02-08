@@ -3,8 +3,6 @@
 ## Enum
 
 
-* `_______` (value: `"---------"`)
-
 * `LOCAL` (value: `"Local"`)
 
 * `GIT` (value: `"Git"`)

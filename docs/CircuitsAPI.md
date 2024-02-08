@@ -1233,7 +1233,7 @@ Name | Type | Description  | Notes
 
 ## CircuitsCircuitTypesList
 
-> PaginatedCircuitTypeList CircuitsCircuitTypesList(ctx).Color(color).ColorEmpty(colorEmpty).ColorIc(colorIc).ColorIe(colorIe).ColorIew(colorIew).ColorIsw(colorIsw).ColorN(colorN).ColorNic(colorNic).ColorNie(colorNie).ColorNiew(colorNiew).ColorNisw(colorNisw).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).ModifiedByRequest(modifiedByRequest).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).Q(q).Slug(slug).SlugEmpty(slugEmpty).SlugIc(slugIc).SlugIe(slugIe).SlugIew(slugIew).SlugIsw(slugIsw).SlugN(slugN).SlugNic(slugNic).SlugNie(slugNie).SlugNiew(slugNiew).SlugNisw(slugNisw).Tag(tag).TagN(tagN).UpdatedByRequest(updatedByRequest).Execute()
+> PaginatedCircuitTypeList CircuitsCircuitTypesList(ctx).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).ModifiedByRequest(modifiedByRequest).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).Q(q).Slug(slug).SlugEmpty(slugEmpty).SlugIc(slugIc).SlugIe(slugIe).SlugIew(slugIew).SlugIsw(slugIsw).SlugN(slugN).SlugNic(slugNic).SlugNie(slugNie).SlugNiew(slugNiew).SlugNisw(slugNisw).Tag(tag).TagN(tagN).UpdatedByRequest(updatedByRequest).Execute()
 
 
 
@@ -1253,17 +1253,6 @@ import (
 )
 
 func main() {
-	color := []string{"Inner_example"} // []string |  (optional)
-	colorEmpty := true // bool |  (optional)
-	colorIc := []string{"Inner_example"} // []string |  (optional)
-	colorIe := []string{"Inner_example"} // []string |  (optional)
-	colorIew := []string{"Inner_example"} // []string |  (optional)
-	colorIsw := []string{"Inner_example"} // []string |  (optional)
-	colorN := []string{"Inner_example"} // []string |  (optional)
-	colorNic := []string{"Inner_example"} // []string |  (optional)
-	colorNie := []string{"Inner_example"} // []string |  (optional)
-	colorNiew := []string{"Inner_example"} // []string |  (optional)
-	colorNisw := []string{"Inner_example"} // []string |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -1330,7 +1319,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.CircuitsAPI.CircuitsCircuitTypesList(context.Background()).Color(color).ColorEmpty(colorEmpty).ColorIc(colorIc).ColorIe(colorIe).ColorIew(colorIew).ColorIsw(colorIsw).ColorN(colorN).ColorNic(colorNic).ColorNie(colorNie).ColorNiew(colorNiew).ColorNisw(colorNisw).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).ModifiedByRequest(modifiedByRequest).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).Q(q).Slug(slug).SlugEmpty(slugEmpty).SlugIc(slugIc).SlugIe(slugIe).SlugIew(slugIew).SlugIsw(slugIsw).SlugN(slugN).SlugNic(slugNic).SlugNie(slugNie).SlugNiew(slugNiew).SlugNisw(slugNisw).Tag(tag).TagN(tagN).UpdatedByRequest(updatedByRequest).Execute()
+	resp, r, err := apiClient.CircuitsAPI.CircuitsCircuitTypesList(context.Background()).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).ModifiedByRequest(modifiedByRequest).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).Q(q).Slug(slug).SlugEmpty(slugEmpty).SlugIc(slugIc).SlugIe(slugIe).SlugIew(slugIew).SlugIsw(slugIsw).SlugN(slugN).SlugNic(slugNic).SlugNie(slugNie).SlugNiew(slugNiew).SlugNisw(slugNisw).Tag(tag).TagN(tagN).UpdatedByRequest(updatedByRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `CircuitsAPI.CircuitsCircuitTypesList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1351,17 +1340,6 @@ Other parameters are passed through a pointer to a apiCircuitsCircuitTypesListRe
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **color** | **[]string** |  | 
- **colorEmpty** | **bool** |  | 
- **colorIc** | **[]string** |  | 
- **colorIe** | **[]string** |  | 
- **colorIew** | **[]string** |  | 
- **colorIsw** | **[]string** |  | 
- **colorN** | **[]string** |  | 
- **colorNic** | **[]string** |  | 
- **colorNie** | **[]string** |  | 
- **colorNiew** | **[]string** |  | 
- **colorNisw** | **[]string** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -2080,12 +2058,12 @@ func main() {
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	provider := []string{"Inner_example"} // []string | Provider (slug) (optional)
 	providerN := []string{"Inner_example"} // []string | Provider (slug) (optional)
-	providerAccountId := []int32{int32(123)} // []int32 | Provider account (ID) (optional)
-	providerAccountIdN := []int32{int32(123)} // []int32 | Provider account (ID) (optional)
+	providerAccountId := []int32{int32(123)} // []int32 | ProviderAccount (ID) (optional)
+	providerAccountIdN := []int32{int32(123)} // []int32 | ProviderAccount (ID) (optional)
 	providerId := []int32{int32(123)} // []int32 | Provider (ID) (optional)
 	providerIdN := []int32{int32(123)} // []int32 | Provider (ID) (optional)
-	providerNetworkId := []int32{int32(123)} // []int32 | Provider network (ID) (optional)
-	providerNetworkIdN := []int32{int32(123)} // []int32 | Provider network (ID) (optional)
+	providerNetworkId := []int32{int32(123)} // []int32 | ProviderNetwork (ID) (optional)
+	providerNetworkIdN := []int32{int32(123)} // []int32 | ProviderNetwork (ID) (optional)
 	q := "q_example" // string | Search (optional)
 	region := []int32{int32(123)} // []int32 | Region (slug) (optional)
 	regionN := []int32{int32(123)} // []int32 | Region (slug) (optional)
@@ -2217,12 +2195,12 @@ Name | Type | Description  | Notes
  **ordering** | **string** | Which field to use when ordering the results. | 
  **provider** | **[]string** | Provider (slug) | 
  **providerN** | **[]string** | Provider (slug) | 
- **providerAccountId** | **[]int32** | Provider account (ID) | 
- **providerAccountIdN** | **[]int32** | Provider account (ID) | 
+ **providerAccountId** | **[]int32** | ProviderAccount (ID) | 
+ **providerAccountIdN** | **[]int32** | ProviderAccount (ID) | 
  **providerId** | **[]int32** | Provider (ID) | 
  **providerIdN** | **[]int32** | Provider (ID) | 
- **providerNetworkId** | **[]int32** | Provider network (ID) | 
- **providerNetworkIdN** | **[]int32** | Provider network (ID) | 
+ **providerNetworkId** | **[]int32** | ProviderNetwork (ID) | 
+ **providerNetworkIdN** | **[]int32** | ProviderNetwork (ID) | 
  **q** | **string** | Search | 
  **region** | **[]int32** | Region (slug) | 
  **regionN** | **[]int32** | Region (slug) | 

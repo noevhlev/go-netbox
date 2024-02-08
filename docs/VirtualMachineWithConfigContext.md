@@ -30,13 +30,12 @@ Name | Type | Description | Notes
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
 **InterfaceCount** | **int32** |  | [readonly] 
-**VirtualDiskCount** | **int32** |  | [readonly] 
 
 ## Methods
 
 ### NewVirtualMachineWithConfigContext
 
-`func NewVirtualMachineWithConfigContext(id int32, url string, display string, name string, primaryIp NullableNestedIPAddress, configContext interface{}, created NullableTime, lastUpdated NullableTime, interfaceCount int32, virtualDiskCount int32, ) *VirtualMachineWithConfigContext`
+`func NewVirtualMachineWithConfigContext(id int32, url string, display string, name string, primaryIp NullableNestedIPAddress, configContext interface{}, created NullableTime, lastUpdated NullableTime, interfaceCount int32, ) *VirtualMachineWithConfigContext`
 
 NewVirtualMachineWithConfigContext instantiates a new VirtualMachineWithConfigContext object
 This constructor will assign default values to properties that have it defined,
@@ -814,26 +813,6 @@ and a boolean to check if the value has been set.
 `func (o *VirtualMachineWithConfigContext) SetInterfaceCount(v int32)`
 
 SetInterfaceCount sets InterfaceCount field to given value.
-
-
-### GetVirtualDiskCount
-
-`func (o *VirtualMachineWithConfigContext) GetVirtualDiskCount() int32`
-
-GetVirtualDiskCount returns the VirtualDiskCount field if non-nil, zero value otherwise.
-
-### GetVirtualDiskCountOk
-
-`func (o *VirtualMachineWithConfigContext) GetVirtualDiskCountOk() (*int32, bool)`
-
-GetVirtualDiskCountOk returns a tuple with the VirtualDiskCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVirtualDiskCount
-
-`func (o *VirtualMachineWithConfigContext) SetVirtualDiskCount(v int32)`
-
-SetVirtualDiskCount sets VirtualDiskCount field to given value.
 
 
 

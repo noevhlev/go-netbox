@@ -13,7 +13,7 @@ fi
 if [ "${NETBOX_VERSION}" == 'latest' ]; then
   NETBOX_VERSION=$(curl --silent https://api.github.com/repos/netbox-community/netbox/releases/latest |
     jq '.tag_name' |
-    sed -E 's/"v([^"]+)"/\1/')
+    /usr/bin/sed -E 's/"v([^"]+)"/\1/')
 fi
 
 # Parse Netbox Docker version

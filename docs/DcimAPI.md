@@ -1373,7 +1373,7 @@ Name | Type | Description  | Notes
 
 ## DcimCablesList
 
-> PaginatedCableList DcimCablesList(ctx).CircuitterminationId(circuitterminationId).Color(color).ColorN(colorN).ConsoleportId(consoleportId).ConsoleserverportId(consoleserverportId).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).Device(device).DeviceId(deviceId).FrontportId(frontportId).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).InterfaceId(interfaceId).Label(label).LabelEmpty(labelEmpty).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNisw(labelNisw).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Length(length).LengthEmpty(lengthEmpty).LengthGt(lengthGt).LengthGte(lengthGte).LengthLt(lengthLt).LengthLte(lengthLte).LengthN(lengthN).LengthUnit(lengthUnit).LengthUnitN(lengthUnitN).Limit(limit).Location(location).LocationId(locationId).ModifiedByRequest(modifiedByRequest).Offset(offset).Ordering(ordering).PowerfeedId(powerfeedId).PoweroutletId(poweroutletId).PowerportId(powerportId).Q(q).Rack(rack).RackId(rackId).RearportId(rearportId).Site(site).SiteId(siteId).Status(status).StatusN(statusN).Tag(tag).TagN(tagN).Tenant(tenant).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupN(tenantGroupN).TenantGroupId(tenantGroupId).TenantGroupIdN(tenantGroupIdN).TenantId(tenantId).TenantIdN(tenantIdN).TerminationAId(terminationAId).TerminationAType(terminationAType).TerminationATypeN(terminationATypeN).TerminationBId(terminationBId).TerminationBType(terminationBType).TerminationBTypeN(terminationBTypeN).Type_(type_).TypeN(typeN).Unterminated(unterminated).UpdatedByRequest(updatedByRequest).Execute()
+> PaginatedCableList DcimCablesList(ctx).Color(color).ColorN(colorN).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).Device(device).DeviceId(deviceId).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).Label(label).LabelEmpty(labelEmpty).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNisw(labelNisw).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Length(length).LengthEmpty(lengthEmpty).LengthGt(lengthGt).LengthGte(lengthGte).LengthLt(lengthLt).LengthLte(lengthLte).LengthN(lengthN).LengthUnit(lengthUnit).LengthUnitN(lengthUnitN).Limit(limit).Location(location).LocationId(locationId).ModifiedByRequest(modifiedByRequest).Offset(offset).Ordering(ordering).Q(q).Rack(rack).RackId(rackId).Site(site).SiteId(siteId).Status(status).StatusN(statusN).Tag(tag).TagN(tagN).Tenant(tenant).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupN(tenantGroupN).TenantGroupId(tenantGroupId).TenantGroupIdN(tenantGroupIdN).TenantId(tenantId).TenantIdN(tenantIdN).TerminationAId(terminationAId).TerminationAType(terminationAType).TerminationATypeN(terminationATypeN).TerminationBId(terminationBId).TerminationBType(terminationBType).TerminationBTypeN(terminationBTypeN).Type_(type_).TypeN(typeN).Unterminated(unterminated).UpdatedByRequest(updatedByRequest).Execute()
 
 
 
@@ -1393,11 +1393,8 @@ import (
 )
 
 func main() {
-	circuitterminationId := []int32{int32(123)} // []int32 |  (optional)
 	color := []string{"Inner_example"} // []string |  (optional)
 	colorN := []string{"Inner_example"} // []string |  (optional)
-	consoleportId := []int32{int32(123)} // []int32 |  (optional)
-	consoleserverportId := []int32{int32(123)} // []int32 |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -1419,7 +1416,6 @@ func main() {
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
 	device := []string{"Inner_example"} // []string |  (optional)
 	deviceId := []int32{int32(123)} // []int32 |  (optional)
-	frontportId := []int32{int32(123)} // []int32 |  (optional)
 	id := []int32{int32(123)} // []int32 |  (optional)
 	idEmpty := true // bool |  (optional)
 	idGt := []int32{int32(123)} // []int32 |  (optional)
@@ -1427,7 +1423,6 @@ func main() {
 	idLt := []int32{int32(123)} // []int32 |  (optional)
 	idLte := []int32{int32(123)} // []int32 |  (optional)
 	idN := []int32{int32(123)} // []int32 |  (optional)
-	interfaceId := []int32{int32(123)} // []int32 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -1461,13 +1456,9 @@ func main() {
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	powerfeedId := []int32{int32(123)} // []int32 |  (optional)
-	poweroutletId := []int32{int32(123)} // []int32 |  (optional)
-	powerportId := []int32{int32(123)} // []int32 |  (optional)
 	q := "q_example" // string | Search (optional)
 	rack := []string{"Inner_example"} // []string |  (optional)
 	rackId := []int32{int32(123)} // []int32 |  (optional)
-	rearportId := []int32{int32(123)} // []int32 |  (optional)
 	site := []string{"Inner_example"} // []string |  (optional)
 	siteId := []int32{int32(123)} // []int32 |  (optional)
 	status := []string{"Inner_example"} // []string |  (optional)
@@ -1495,7 +1486,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimCablesList(context.Background()).CircuitterminationId(circuitterminationId).Color(color).ColorN(colorN).ConsoleportId(consoleportId).ConsoleserverportId(consoleserverportId).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).Device(device).DeviceId(deviceId).FrontportId(frontportId).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).InterfaceId(interfaceId).Label(label).LabelEmpty(labelEmpty).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNisw(labelNisw).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Length(length).LengthEmpty(lengthEmpty).LengthGt(lengthGt).LengthGte(lengthGte).LengthLt(lengthLt).LengthLte(lengthLte).LengthN(lengthN).LengthUnit(lengthUnit).LengthUnitN(lengthUnitN).Limit(limit).Location(location).LocationId(locationId).ModifiedByRequest(modifiedByRequest).Offset(offset).Ordering(ordering).PowerfeedId(powerfeedId).PoweroutletId(poweroutletId).PowerportId(powerportId).Q(q).Rack(rack).RackId(rackId).RearportId(rearportId).Site(site).SiteId(siteId).Status(status).StatusN(statusN).Tag(tag).TagN(tagN).Tenant(tenant).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupN(tenantGroupN).TenantGroupId(tenantGroupId).TenantGroupIdN(tenantGroupIdN).TenantId(tenantId).TenantIdN(tenantIdN).TerminationAId(terminationAId).TerminationAType(terminationAType).TerminationATypeN(terminationATypeN).TerminationBId(terminationBId).TerminationBType(terminationBType).TerminationBTypeN(terminationBTypeN).Type_(type_).TypeN(typeN).Unterminated(unterminated).UpdatedByRequest(updatedByRequest).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimCablesList(context.Background()).Color(color).ColorN(colorN).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).Device(device).DeviceId(deviceId).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).Label(label).LabelEmpty(labelEmpty).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNisw(labelNisw).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Length(length).LengthEmpty(lengthEmpty).LengthGt(lengthGt).LengthGte(lengthGte).LengthLt(lengthLt).LengthLte(lengthLte).LengthN(lengthN).LengthUnit(lengthUnit).LengthUnitN(lengthUnitN).Limit(limit).Location(location).LocationId(locationId).ModifiedByRequest(modifiedByRequest).Offset(offset).Ordering(ordering).Q(q).Rack(rack).RackId(rackId).Site(site).SiteId(siteId).Status(status).StatusN(statusN).Tag(tag).TagN(tagN).Tenant(tenant).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupN(tenantGroupN).TenantGroupId(tenantGroupId).TenantGroupIdN(tenantGroupIdN).TenantId(tenantId).TenantIdN(tenantIdN).TerminationAId(terminationAId).TerminationAType(terminationAType).TerminationATypeN(terminationATypeN).TerminationBId(terminationBId).TerminationBType(terminationBType).TerminationBTypeN(terminationBTypeN).Type_(type_).TypeN(typeN).Unterminated(unterminated).UpdatedByRequest(updatedByRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCablesList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1516,11 +1507,8 @@ Other parameters are passed through a pointer to a apiDcimCablesListRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **circuitterminationId** | **[]int32** |  | 
  **color** | **[]string** |  | 
  **colorN** | **[]string** |  | 
- **consoleportId** | **[]int32** |  | 
- **consoleserverportId** | **[]int32** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -1542,7 +1530,6 @@ Name | Type | Description  | Notes
  **descriptionNisw** | **[]string** |  | 
  **device** | **[]string** |  | 
  **deviceId** | **[]int32** |  | 
- **frontportId** | **[]int32** |  | 
  **id** | **[]int32** |  | 
  **idEmpty** | **bool** |  | 
  **idGt** | **[]int32** |  | 
@@ -1550,7 +1537,6 @@ Name | Type | Description  | Notes
  **idLt** | **[]int32** |  | 
  **idLte** | **[]int32** |  | 
  **idN** | **[]int32** |  | 
- **interfaceId** | **[]int32** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -1584,13 +1570,9 @@ Name | Type | Description  | Notes
  **modifiedByRequest** | **string** |  | 
  **offset** | **int32** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
- **powerfeedId** | **[]int32** |  | 
- **poweroutletId** | **[]int32** |  | 
- **powerportId** | **[]int32** |  | 
  **q** | **string** | Search | 
  **rack** | **[]string** |  | 
  **rackId** | **[]int32** |  | 
- **rearportId** | **[]int32** |  | 
  **site** | **[]string** |  | 
  **siteId** | **[]int32** |  | 
  **status** | **[]string** |  | 
@@ -7787,7 +7769,7 @@ Name | Type | Description  | Notes
 
 ## DcimDeviceTypesList
 
-> PaginatedDeviceTypeList DcimDeviceTypesList(ctx).Airflow(airflow).AirflowN(airflowN).ConsolePorts(consolePorts).ConsoleServerPorts(consoleServerPorts).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).DefaultPlatform(defaultPlatform).DefaultPlatformN(defaultPlatformN).DefaultPlatformId(defaultPlatformId).DefaultPlatformIdN(defaultPlatformIdN).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).DeviceBays(deviceBays).ExcludeFromUtilization(excludeFromUtilization).HasFrontImage(hasFrontImage).HasRearImage(hasRearImage).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).Interfaces(interfaces).InventoryItems(inventoryItems).IsFullDepth(isFullDepth).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Manufacturer(manufacturer).ManufacturerN(manufacturerN).ManufacturerId(manufacturerId).ManufacturerIdN(manufacturerIdN).Model(model).ModelEmpty(modelEmpty).ModelIc(modelIc).ModelIe(modelIe).ModelIew(modelIew).ModelIsw(modelIsw).ModelN(modelN).ModelNic(modelNic).ModelNie(modelNie).ModelNiew(modelNiew).ModelNisw(modelNisw).ModifiedByRequest(modifiedByRequest).ModuleBays(moduleBays).Offset(offset).Ordering(ordering).PartNumber(partNumber).PartNumberEmpty(partNumberEmpty).PartNumberIc(partNumberIc).PartNumberIe(partNumberIe).PartNumberIew(partNumberIew).PartNumberIsw(partNumberIsw).PartNumberN(partNumberN).PartNumberNic(partNumberNic).PartNumberNie(partNumberNie).PartNumberNiew(partNumberNiew).PartNumberNisw(partNumberNisw).PassThroughPorts(passThroughPorts).PowerOutlets(powerOutlets).PowerPorts(powerPorts).Q(q).Slug(slug).SlugEmpty(slugEmpty).SlugIc(slugIc).SlugIe(slugIe).SlugIew(slugIew).SlugIsw(slugIsw).SlugN(slugN).SlugNic(slugNic).SlugNie(slugNie).SlugNiew(slugNiew).SlugNisw(slugNisw).SubdeviceRole(subdeviceRole).SubdeviceRoleN(subdeviceRoleN).Tag(tag).TagN(tagN).UHeight(uHeight).UHeightEmpty(uHeightEmpty).UHeightGt(uHeightGt).UHeightGte(uHeightGte).UHeightLt(uHeightLt).UHeightLte(uHeightLte).UHeightN(uHeightN).UpdatedByRequest(updatedByRequest).Weight(weight).WeightEmpty(weightEmpty).WeightGt(weightGt).WeightGte(weightGte).WeightLt(weightLt).WeightLte(weightLte).WeightN(weightN).WeightUnit(weightUnit).WeightUnitN(weightUnitN).Execute()
+> PaginatedDeviceTypeList DcimDeviceTypesList(ctx).Airflow(airflow).AirflowN(airflowN).ConsolePorts(consolePorts).ConsoleServerPorts(consoleServerPorts).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).DefaultPlatform(defaultPlatform).DefaultPlatformN(defaultPlatformN).DefaultPlatformId(defaultPlatformId).DefaultPlatformIdN(defaultPlatformIdN).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).DeviceBays(deviceBays).HasFrontImage(hasFrontImage).HasRearImage(hasRearImage).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).Interfaces(interfaces).InventoryItems(inventoryItems).IsFullDepth(isFullDepth).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Manufacturer(manufacturer).ManufacturerN(manufacturerN).ManufacturerId(manufacturerId).ManufacturerIdN(manufacturerIdN).Model(model).ModelEmpty(modelEmpty).ModelIc(modelIc).ModelIe(modelIe).ModelIew(modelIew).ModelIsw(modelIsw).ModelN(modelN).ModelNic(modelNic).ModelNie(modelNie).ModelNiew(modelNiew).ModelNisw(modelNisw).ModifiedByRequest(modifiedByRequest).ModuleBays(moduleBays).Offset(offset).Ordering(ordering).PartNumber(partNumber).PartNumberEmpty(partNumberEmpty).PartNumberIc(partNumberIc).PartNumberIe(partNumberIe).PartNumberIew(partNumberIew).PartNumberIsw(partNumberIsw).PartNumberN(partNumberN).PartNumberNic(partNumberNic).PartNumberNie(partNumberNie).PartNumberNiew(partNumberNiew).PartNumberNisw(partNumberNisw).PassThroughPorts(passThroughPorts).PowerOutlets(powerOutlets).PowerPorts(powerPorts).Q(q).Slug(slug).SlugEmpty(slugEmpty).SlugIc(slugIc).SlugIe(slugIe).SlugIew(slugIew).SlugIsw(slugIsw).SlugN(slugN).SlugNic(slugNic).SlugNie(slugNie).SlugNiew(slugNiew).SlugNisw(slugNisw).SubdeviceRole(subdeviceRole).SubdeviceRoleN(subdeviceRoleN).Tag(tag).TagN(tagN).UHeight(uHeight).UHeightEmpty(uHeightEmpty).UHeightGt(uHeightGt).UHeightGte(uHeightGte).UHeightLt(uHeightLt).UHeightLte(uHeightLte).UHeightN(uHeightN).UpdatedByRequest(updatedByRequest).Weight(weight).WeightEmpty(weightEmpty).WeightGt(weightGt).WeightGte(weightGte).WeightLt(weightLt).WeightLte(weightLte).WeightN(weightN).WeightUnit(weightUnit).WeightUnitN(weightUnitN).Execute()
 
 
 
@@ -7835,7 +7817,6 @@ func main() {
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
 	deviceBays := true // bool | Has device bays (optional)
-	excludeFromUtilization := true // bool |  (optional)
 	hasFrontImage := true // bool | Has a front image (optional)
 	hasRearImage := true // bool | Has a rear image (optional)
 	id := []int32{int32(123)} // []int32 |  (optional)
@@ -7925,7 +7906,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimDeviceTypesList(context.Background()).Airflow(airflow).AirflowN(airflowN).ConsolePorts(consolePorts).ConsoleServerPorts(consoleServerPorts).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).DefaultPlatform(defaultPlatform).DefaultPlatformN(defaultPlatformN).DefaultPlatformId(defaultPlatformId).DefaultPlatformIdN(defaultPlatformIdN).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).DeviceBays(deviceBays).ExcludeFromUtilization(excludeFromUtilization).HasFrontImage(hasFrontImage).HasRearImage(hasRearImage).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).Interfaces(interfaces).InventoryItems(inventoryItems).IsFullDepth(isFullDepth).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Manufacturer(manufacturer).ManufacturerN(manufacturerN).ManufacturerId(manufacturerId).ManufacturerIdN(manufacturerIdN).Model(model).ModelEmpty(modelEmpty).ModelIc(modelIc).ModelIe(modelIe).ModelIew(modelIew).ModelIsw(modelIsw).ModelN(modelN).ModelNic(modelNic).ModelNie(modelNie).ModelNiew(modelNiew).ModelNisw(modelNisw).ModifiedByRequest(modifiedByRequest).ModuleBays(moduleBays).Offset(offset).Ordering(ordering).PartNumber(partNumber).PartNumberEmpty(partNumberEmpty).PartNumberIc(partNumberIc).PartNumberIe(partNumberIe).PartNumberIew(partNumberIew).PartNumberIsw(partNumberIsw).PartNumberN(partNumberN).PartNumberNic(partNumberNic).PartNumberNie(partNumberNie).PartNumberNiew(partNumberNiew).PartNumberNisw(partNumberNisw).PassThroughPorts(passThroughPorts).PowerOutlets(powerOutlets).PowerPorts(powerPorts).Q(q).Slug(slug).SlugEmpty(slugEmpty).SlugIc(slugIc).SlugIe(slugIe).SlugIew(slugIew).SlugIsw(slugIsw).SlugN(slugN).SlugNic(slugNic).SlugNie(slugNie).SlugNiew(slugNiew).SlugNisw(slugNisw).SubdeviceRole(subdeviceRole).SubdeviceRoleN(subdeviceRoleN).Tag(tag).TagN(tagN).UHeight(uHeight).UHeightEmpty(uHeightEmpty).UHeightGt(uHeightGt).UHeightGte(uHeightGte).UHeightLt(uHeightLt).UHeightLte(uHeightLte).UHeightN(uHeightN).UpdatedByRequest(updatedByRequest).Weight(weight).WeightEmpty(weightEmpty).WeightGt(weightGt).WeightGte(weightGte).WeightLt(weightLt).WeightLte(weightLte).WeightN(weightN).WeightUnit(weightUnit).WeightUnitN(weightUnitN).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimDeviceTypesList(context.Background()).Airflow(airflow).AirflowN(airflowN).ConsolePorts(consolePorts).ConsoleServerPorts(consoleServerPorts).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).DefaultPlatform(defaultPlatform).DefaultPlatformN(defaultPlatformN).DefaultPlatformId(defaultPlatformId).DefaultPlatformIdN(defaultPlatformIdN).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).DeviceBays(deviceBays).HasFrontImage(hasFrontImage).HasRearImage(hasRearImage).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).Interfaces(interfaces).InventoryItems(inventoryItems).IsFullDepth(isFullDepth).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Manufacturer(manufacturer).ManufacturerN(manufacturerN).ManufacturerId(manufacturerId).ManufacturerIdN(manufacturerIdN).Model(model).ModelEmpty(modelEmpty).ModelIc(modelIc).ModelIe(modelIe).ModelIew(modelIew).ModelIsw(modelIsw).ModelN(modelN).ModelNic(modelNic).ModelNie(modelNie).ModelNiew(modelNiew).ModelNisw(modelNisw).ModifiedByRequest(modifiedByRequest).ModuleBays(moduleBays).Offset(offset).Ordering(ordering).PartNumber(partNumber).PartNumberEmpty(partNumberEmpty).PartNumberIc(partNumberIc).PartNumberIe(partNumberIe).PartNumberIew(partNumberIew).PartNumberIsw(partNumberIsw).PartNumberN(partNumberN).PartNumberNic(partNumberNic).PartNumberNie(partNumberNie).PartNumberNiew(partNumberNiew).PartNumberNisw(partNumberNisw).PassThroughPorts(passThroughPorts).PowerOutlets(powerOutlets).PowerPorts(powerPorts).Q(q).Slug(slug).SlugEmpty(slugEmpty).SlugIc(slugIc).SlugIe(slugIe).SlugIew(slugIew).SlugIsw(slugIsw).SlugN(slugN).SlugNic(slugNic).SlugNie(slugNie).SlugNiew(slugNiew).SlugNisw(slugNisw).SubdeviceRole(subdeviceRole).SubdeviceRoleN(subdeviceRoleN).Tag(tag).TagN(tagN).UHeight(uHeight).UHeightEmpty(uHeightEmpty).UHeightGt(uHeightGt).UHeightGte(uHeightGte).UHeightLt(uHeightLt).UHeightLte(uHeightLte).UHeightN(uHeightN).UpdatedByRequest(updatedByRequest).Weight(weight).WeightEmpty(weightEmpty).WeightGt(weightGt).WeightGte(weightGte).WeightLt(weightLt).WeightLte(weightLte).WeightN(weightN).WeightUnit(weightUnit).WeightUnitN(weightUnitN).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimDeviceTypesList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -7974,7 +7955,6 @@ Name | Type | Description  | Notes
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
  **deviceBays** | **bool** | Has device bays | 
- **excludeFromUtilization** | **bool** |  | 
  **hasFrontImage** | **bool** | Has a front image | 
  **hasRearImage** | **bool** | Has a rear image | 
  **id** | **[]int32** |  | 

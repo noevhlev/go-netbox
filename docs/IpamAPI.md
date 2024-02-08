@@ -71,6 +71,24 @@ Method | HTTP request | Description
 [**IpamIpRangesPartialUpdate**](IpamAPI.md#IpamIpRangesPartialUpdate) | **Patch** /api/ipam/ip-ranges/{id}/ | 
 [**IpamIpRangesRetrieve**](IpamAPI.md#IpamIpRangesRetrieve) | **Get** /api/ipam/ip-ranges/{id}/ | 
 [**IpamIpRangesUpdate**](IpamAPI.md#IpamIpRangesUpdate) | **Put** /api/ipam/ip-ranges/{id}/ | 
+[**IpamL2vpnTerminationsBulkDestroy**](IpamAPI.md#IpamL2vpnTerminationsBulkDestroy) | **Delete** /api/ipam/l2vpn-terminations/ | 
+[**IpamL2vpnTerminationsBulkPartialUpdate**](IpamAPI.md#IpamL2vpnTerminationsBulkPartialUpdate) | **Patch** /api/ipam/l2vpn-terminations/ | 
+[**IpamL2vpnTerminationsBulkUpdate**](IpamAPI.md#IpamL2vpnTerminationsBulkUpdate) | **Put** /api/ipam/l2vpn-terminations/ | 
+[**IpamL2vpnTerminationsCreate**](IpamAPI.md#IpamL2vpnTerminationsCreate) | **Post** /api/ipam/l2vpn-terminations/ | 
+[**IpamL2vpnTerminationsDestroy**](IpamAPI.md#IpamL2vpnTerminationsDestroy) | **Delete** /api/ipam/l2vpn-terminations/{id}/ | 
+[**IpamL2vpnTerminationsList**](IpamAPI.md#IpamL2vpnTerminationsList) | **Get** /api/ipam/l2vpn-terminations/ | 
+[**IpamL2vpnTerminationsPartialUpdate**](IpamAPI.md#IpamL2vpnTerminationsPartialUpdate) | **Patch** /api/ipam/l2vpn-terminations/{id}/ | 
+[**IpamL2vpnTerminationsRetrieve**](IpamAPI.md#IpamL2vpnTerminationsRetrieve) | **Get** /api/ipam/l2vpn-terminations/{id}/ | 
+[**IpamL2vpnTerminationsUpdate**](IpamAPI.md#IpamL2vpnTerminationsUpdate) | **Put** /api/ipam/l2vpn-terminations/{id}/ | 
+[**IpamL2vpnsBulkDestroy**](IpamAPI.md#IpamL2vpnsBulkDestroy) | **Delete** /api/ipam/l2vpns/ | 
+[**IpamL2vpnsBulkPartialUpdate**](IpamAPI.md#IpamL2vpnsBulkPartialUpdate) | **Patch** /api/ipam/l2vpns/ | 
+[**IpamL2vpnsBulkUpdate**](IpamAPI.md#IpamL2vpnsBulkUpdate) | **Put** /api/ipam/l2vpns/ | 
+[**IpamL2vpnsCreate**](IpamAPI.md#IpamL2vpnsCreate) | **Post** /api/ipam/l2vpns/ | 
+[**IpamL2vpnsDestroy**](IpamAPI.md#IpamL2vpnsDestroy) | **Delete** /api/ipam/l2vpns/{id}/ | 
+[**IpamL2vpnsList**](IpamAPI.md#IpamL2vpnsList) | **Get** /api/ipam/l2vpns/ | 
+[**IpamL2vpnsPartialUpdate**](IpamAPI.md#IpamL2vpnsPartialUpdate) | **Patch** /api/ipam/l2vpns/{id}/ | 
+[**IpamL2vpnsRetrieve**](IpamAPI.md#IpamL2vpnsRetrieve) | **Get** /api/ipam/l2vpns/{id}/ | 
+[**IpamL2vpnsUpdate**](IpamAPI.md#IpamL2vpnsUpdate) | **Put** /api/ipam/l2vpns/{id}/ | 
 [**IpamPrefixesAvailableIpsCreate**](IpamAPI.md#IpamPrefixesAvailableIpsCreate) | **Post** /api/ipam/prefixes/{id}/available-ips/ | 
 [**IpamPrefixesAvailableIpsList**](IpamAPI.md#IpamPrefixesAvailableIpsList) | **Get** /api/ipam/prefixes/{id}/available-ips/ | 
 [**IpamPrefixesAvailablePrefixesCreate**](IpamAPI.md#IpamPrefixesAvailablePrefixesCreate) | **Post** /api/ipam/prefixes/{id}/available-prefixes/ | 
@@ -5663,6 +5681,1538 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**IPRange**](IPRange.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnTerminationsBulkDestroy
+
+> IpamL2vpnTerminationsBulkDestroy(ctx).L2VPNTerminationRequest(l2VPNTerminationRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	l2VPNTerminationRequest := []openapiclient.L2VPNTerminationRequest{*openapiclient.NewL2VPNTerminationRequest(*openapiclient.NewNestedL2VPNRequest("Name_example", "Slug_example", openapiclient.L2VPN_type_value("vpws")), "AssignedObjectType_example", int64(123))} // []L2VPNTerminationRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.IpamAPI.IpamL2vpnTerminationsBulkDestroy(context.Background()).L2VPNTerminationRequest(l2VPNTerminationRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnTerminationsBulkDestroy``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnTerminationsBulkDestroyRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **l2VPNTerminationRequest** | [**[]L2VPNTerminationRequest**](L2VPNTerminationRequest.md) |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnTerminationsBulkPartialUpdate
+
+> []L2VPNTermination IpamL2vpnTerminationsBulkPartialUpdate(ctx).L2VPNTerminationRequest(l2VPNTerminationRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	l2VPNTerminationRequest := []openapiclient.L2VPNTerminationRequest{*openapiclient.NewL2VPNTerminationRequest(*openapiclient.NewNestedL2VPNRequest("Name_example", "Slug_example", openapiclient.L2VPN_type_value("vpws")), "AssignedObjectType_example", int64(123))} // []L2VPNTerminationRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IpamAPI.IpamL2vpnTerminationsBulkPartialUpdate(context.Background()).L2VPNTerminationRequest(l2VPNTerminationRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnTerminationsBulkPartialUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IpamL2vpnTerminationsBulkPartialUpdate`: []L2VPNTermination
+	fmt.Fprintf(os.Stdout, "Response from `IpamAPI.IpamL2vpnTerminationsBulkPartialUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnTerminationsBulkPartialUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **l2VPNTerminationRequest** | [**[]L2VPNTerminationRequest**](L2VPNTerminationRequest.md) |  | 
+
+### Return type
+
+[**[]L2VPNTermination**](L2VPNTermination.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnTerminationsBulkUpdate
+
+> []L2VPNTermination IpamL2vpnTerminationsBulkUpdate(ctx).L2VPNTerminationRequest(l2VPNTerminationRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	l2VPNTerminationRequest := []openapiclient.L2VPNTerminationRequest{*openapiclient.NewL2VPNTerminationRequest(*openapiclient.NewNestedL2VPNRequest("Name_example", "Slug_example", openapiclient.L2VPN_type_value("vpws")), "AssignedObjectType_example", int64(123))} // []L2VPNTerminationRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IpamAPI.IpamL2vpnTerminationsBulkUpdate(context.Background()).L2VPNTerminationRequest(l2VPNTerminationRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnTerminationsBulkUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IpamL2vpnTerminationsBulkUpdate`: []L2VPNTermination
+	fmt.Fprintf(os.Stdout, "Response from `IpamAPI.IpamL2vpnTerminationsBulkUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnTerminationsBulkUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **l2VPNTerminationRequest** | [**[]L2VPNTerminationRequest**](L2VPNTerminationRequest.md) |  | 
+
+### Return type
+
+[**[]L2VPNTermination**](L2VPNTermination.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnTerminationsCreate
+
+> L2VPNTermination IpamL2vpnTerminationsCreate(ctx).WritableL2VPNTerminationRequest(writableL2VPNTerminationRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	writableL2VPNTerminationRequest := *openapiclient.NewWritableL2VPNTerminationRequest(int32(123), "AssignedObjectType_example", int64(123)) // WritableL2VPNTerminationRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IpamAPI.IpamL2vpnTerminationsCreate(context.Background()).WritableL2VPNTerminationRequest(writableL2VPNTerminationRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnTerminationsCreate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IpamL2vpnTerminationsCreate`: L2VPNTermination
+	fmt.Fprintf(os.Stdout, "Response from `IpamAPI.IpamL2vpnTerminationsCreate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnTerminationsCreateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **writableL2VPNTerminationRequest** | [**WritableL2VPNTerminationRequest**](WritableL2VPNTerminationRequest.md) |  | 
+
+### Return type
+
+[**L2VPNTermination**](L2VPNTermination.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnTerminationsDestroy
+
+> IpamL2vpnTerminationsDestroy(ctx, id).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	id := int32(56) // int32 | A unique integer value identifying this L2VPN termination.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.IpamAPI.IpamL2vpnTerminationsDestroy(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnTerminationsDestroy``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **int32** | A unique integer value identifying this L2VPN termination. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnTerminationsDestroyRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnTerminationsList
+
+> PaginatedL2VPNTerminationList IpamL2vpnTerminationsList(ctx).AssignedObjectType(assignedObjectType).AssignedObjectTypeN(assignedObjectTypeN).AssignedObjectTypeId(assignedObjectTypeId).AssignedObjectTypeIdN(assignedObjectTypeIdN).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Device(device).DeviceN(deviceN).DeviceId(deviceId).DeviceIdN(deviceIdN).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).Interface_(interface_).InterfaceN(interfaceN).InterfaceId(interfaceId).InterfaceIdN(interfaceIdN).L2vpn(l2vpn).L2vpnN(l2vpnN).L2vpnId(l2vpnId).L2vpnIdN(l2vpnIdN).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).ModifiedByRequest(modifiedByRequest).Offset(offset).Ordering(ordering).Q(q).Region(region).RegionId(regionId).Site(site).SiteId(siteId).Tag(tag).TagN(tagN).UpdatedByRequest(updatedByRequest).VirtualMachine(virtualMachine).VirtualMachineN(virtualMachineN).VirtualMachineId(virtualMachineId).VirtualMachineIdN(virtualMachineIdN).Vlan(vlan).VlanN(vlanN).VlanId(vlanId).VlanIdN(vlanIdN).VlanVid(vlanVid).VlanVidEmpty(vlanVidEmpty).VlanVidGt(vlanVidGt).VlanVidGte(vlanVidGte).VlanVidLt(vlanVidLt).VlanVidLte(vlanVidLte).VlanVidN(vlanVidN).Vminterface(vminterface).VminterfaceN(vminterfaceN).VminterfaceId(vminterfaceId).VminterfaceIdN(vminterfaceIdN).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+    "time"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	assignedObjectType := "assignedObjectType_example" // string |  (optional)
+	assignedObjectTypeN := "assignedObjectTypeN_example" // string |  (optional)
+	assignedObjectTypeId := int32(56) // int32 |  (optional)
+	assignedObjectTypeIdN := int32(56) // int32 |  (optional)
+	created := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdGte := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdLt := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdLte := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdN := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
+	device := []*string{"Inner_example"} // []*string | Device (name) (optional)
+	deviceN := []*string{"Inner_example"} // []*string | Device (name) (optional)
+	deviceId := []int32{int32(123)} // []int32 | Device (ID) (optional)
+	deviceIdN := []int32{int32(123)} // []int32 | Device (ID) (optional)
+	id := []int32{int32(123)} // []int32 |  (optional)
+	idEmpty := true // bool |  (optional)
+	idGt := []int32{int32(123)} // []int32 |  (optional)
+	idGte := []int32{int32(123)} // []int32 |  (optional)
+	idLt := []int32{int32(123)} // []int32 |  (optional)
+	idLte := []int32{int32(123)} // []int32 |  (optional)
+	idN := []int32{int32(123)} // []int32 |  (optional)
+	interface_ := []string{"Inner_example"} // []string | Interface (name) (optional)
+	interfaceN := []string{"Inner_example"} // []string | Interface (name) (optional)
+	interfaceId := []int32{int32(123)} // []int32 | Interface (ID) (optional)
+	interfaceIdN := []int32{int32(123)} // []int32 | Interface (ID) (optional)
+	l2vpn := []string{"Inner_example"} // []string | L2VPN (slug) (optional)
+	l2vpnN := []string{"Inner_example"} // []string | L2VPN (slug) (optional)
+	l2vpnId := []int32{int32(123)} // []int32 | L2VPN (ID) (optional)
+	l2vpnIdN := []int32{int32(123)} // []int32 | L2VPN (ID) (optional)
+	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedGte := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
+	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
+	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
+	q := "q_example" // string | Search (optional)
+	region := []string{"Inner_example"} // []string |  (optional)
+	regionId := []int32{int32(123)} // []int32 |  (optional)
+	site := []string{"Inner_example"} // []string |  (optional)
+	siteId := []int32{int32(123)} // []int32 |  (optional)
+	tag := []string{"Inner_example"} // []string |  (optional)
+	tagN := []string{"Inner_example"} // []string |  (optional)
+	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
+	virtualMachine := []string{"Inner_example"} // []string | Virtual machine (name) (optional)
+	virtualMachineN := []string{"Inner_example"} // []string | Virtual machine (name) (optional)
+	virtualMachineId := []int32{int32(123)} // []int32 | Virtual machine (ID) (optional)
+	virtualMachineIdN := []int32{int32(123)} // []int32 | Virtual machine (ID) (optional)
+	vlan := []string{"Inner_example"} // []string | VLAN (name) (optional)
+	vlanN := []string{"Inner_example"} // []string | VLAN (name) (optional)
+	vlanId := []int32{int32(123)} // []int32 | VLAN (ID) (optional)
+	vlanIdN := []int32{int32(123)} // []int32 | VLAN (ID) (optional)
+	vlanVid := int32(56) // int32 | VLAN number (1-4094) (optional)
+	vlanVidEmpty := int32(56) // int32 | VLAN number (1-4094) (optional)
+	vlanVidGt := int32(56) // int32 | VLAN number (1-4094) (optional)
+	vlanVidGte := int32(56) // int32 | VLAN number (1-4094) (optional)
+	vlanVidLt := int32(56) // int32 | VLAN number (1-4094) (optional)
+	vlanVidLte := int32(56) // int32 | VLAN number (1-4094) (optional)
+	vlanVidN := int32(56) // int32 | VLAN number (1-4094) (optional)
+	vminterface := []string{"Inner_example"} // []string | VM interface (name) (optional)
+	vminterfaceN := []string{"Inner_example"} // []string | VM interface (name) (optional)
+	vminterfaceId := []int32{int32(123)} // []int32 | VM Interface (ID) (optional)
+	vminterfaceIdN := []int32{int32(123)} // []int32 | VM Interface (ID) (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IpamAPI.IpamL2vpnTerminationsList(context.Background()).AssignedObjectType(assignedObjectType).AssignedObjectTypeN(assignedObjectTypeN).AssignedObjectTypeId(assignedObjectTypeId).AssignedObjectTypeIdN(assignedObjectTypeIdN).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Device(device).DeviceN(deviceN).DeviceId(deviceId).DeviceIdN(deviceIdN).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).Interface_(interface_).InterfaceN(interfaceN).InterfaceId(interfaceId).InterfaceIdN(interfaceIdN).L2vpn(l2vpn).L2vpnN(l2vpnN).L2vpnId(l2vpnId).L2vpnIdN(l2vpnIdN).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).ModifiedByRequest(modifiedByRequest).Offset(offset).Ordering(ordering).Q(q).Region(region).RegionId(regionId).Site(site).SiteId(siteId).Tag(tag).TagN(tagN).UpdatedByRequest(updatedByRequest).VirtualMachine(virtualMachine).VirtualMachineN(virtualMachineN).VirtualMachineId(virtualMachineId).VirtualMachineIdN(virtualMachineIdN).Vlan(vlan).VlanN(vlanN).VlanId(vlanId).VlanIdN(vlanIdN).VlanVid(vlanVid).VlanVidEmpty(vlanVidEmpty).VlanVidGt(vlanVidGt).VlanVidGte(vlanVidGte).VlanVidLt(vlanVidLt).VlanVidLte(vlanVidLte).VlanVidN(vlanVidN).Vminterface(vminterface).VminterfaceN(vminterfaceN).VminterfaceId(vminterfaceId).VminterfaceIdN(vminterfaceIdN).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnTerminationsList``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IpamL2vpnTerminationsList`: PaginatedL2VPNTerminationList
+	fmt.Fprintf(os.Stdout, "Response from `IpamAPI.IpamL2vpnTerminationsList`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnTerminationsListRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **assignedObjectType** | **string** |  | 
+ **assignedObjectTypeN** | **string** |  | 
+ **assignedObjectTypeId** | **int32** |  | 
+ **assignedObjectTypeIdN** | **int32** |  | 
+ **created** | [**[]time.Time**](time.Time.md) |  | 
+ **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
+ **createdGt** | [**[]time.Time**](time.Time.md) |  | 
+ **createdGte** | [**[]time.Time**](time.Time.md) |  | 
+ **createdLt** | [**[]time.Time**](time.Time.md) |  | 
+ **createdLte** | [**[]time.Time**](time.Time.md) |  | 
+ **createdN** | [**[]time.Time**](time.Time.md) |  | 
+ **createdByRequest** | **string** |  | 
+ **device** | **[]string** | Device (name) | 
+ **deviceN** | **[]string** | Device (name) | 
+ **deviceId** | **[]int32** | Device (ID) | 
+ **deviceIdN** | **[]int32** | Device (ID) | 
+ **id** | **[]int32** |  | 
+ **idEmpty** | **bool** |  | 
+ **idGt** | **[]int32** |  | 
+ **idGte** | **[]int32** |  | 
+ **idLt** | **[]int32** |  | 
+ **idLte** | **[]int32** |  | 
+ **idN** | **[]int32** |  | 
+ **interface_** | **[]string** | Interface (name) | 
+ **interfaceN** | **[]string** | Interface (name) | 
+ **interfaceId** | **[]int32** | Interface (ID) | 
+ **interfaceIdN** | **[]int32** | Interface (ID) | 
+ **l2vpn** | **[]string** | L2VPN (slug) | 
+ **l2vpnN** | **[]string** | L2VPN (slug) | 
+ **l2vpnId** | **[]int32** | L2VPN (ID) | 
+ **l2vpnIdN** | **[]int32** | L2VPN (ID) | 
+ **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedGte** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
+ **limit** | **int32** | Number of results to return per page. | 
+ **modifiedByRequest** | **string** |  | 
+ **offset** | **int32** | The initial index from which to return the results. | 
+ **ordering** | **string** | Which field to use when ordering the results. | 
+ **q** | **string** | Search | 
+ **region** | **[]string** |  | 
+ **regionId** | **[]int32** |  | 
+ **site** | **[]string** |  | 
+ **siteId** | **[]int32** |  | 
+ **tag** | **[]string** |  | 
+ **tagN** | **[]string** |  | 
+ **updatedByRequest** | **string** |  | 
+ **virtualMachine** | **[]string** | Virtual machine (name) | 
+ **virtualMachineN** | **[]string** | Virtual machine (name) | 
+ **virtualMachineId** | **[]int32** | Virtual machine (ID) | 
+ **virtualMachineIdN** | **[]int32** | Virtual machine (ID) | 
+ **vlan** | **[]string** | VLAN (name) | 
+ **vlanN** | **[]string** | VLAN (name) | 
+ **vlanId** | **[]int32** | VLAN (ID) | 
+ **vlanIdN** | **[]int32** | VLAN (ID) | 
+ **vlanVid** | **int32** | VLAN number (1-4094) | 
+ **vlanVidEmpty** | **int32** | VLAN number (1-4094) | 
+ **vlanVidGt** | **int32** | VLAN number (1-4094) | 
+ **vlanVidGte** | **int32** | VLAN number (1-4094) | 
+ **vlanVidLt** | **int32** | VLAN number (1-4094) | 
+ **vlanVidLte** | **int32** | VLAN number (1-4094) | 
+ **vlanVidN** | **int32** | VLAN number (1-4094) | 
+ **vminterface** | **[]string** | VM interface (name) | 
+ **vminterfaceN** | **[]string** | VM interface (name) | 
+ **vminterfaceId** | **[]int32** | VM Interface (ID) | 
+ **vminterfaceIdN** | **[]int32** | VM Interface (ID) | 
+
+### Return type
+
+[**PaginatedL2VPNTerminationList**](PaginatedL2VPNTerminationList.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnTerminationsPartialUpdate
+
+> L2VPNTermination IpamL2vpnTerminationsPartialUpdate(ctx, id).PatchedWritableL2VPNTerminationRequest(patchedWritableL2VPNTerminationRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	id := int32(56) // int32 | A unique integer value identifying this L2VPN termination.
+	patchedWritableL2VPNTerminationRequest := *openapiclient.NewPatchedWritableL2VPNTerminationRequest() // PatchedWritableL2VPNTerminationRequest |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IpamAPI.IpamL2vpnTerminationsPartialUpdate(context.Background(), id).PatchedWritableL2VPNTerminationRequest(patchedWritableL2VPNTerminationRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnTerminationsPartialUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IpamL2vpnTerminationsPartialUpdate`: L2VPNTermination
+	fmt.Fprintf(os.Stdout, "Response from `IpamAPI.IpamL2vpnTerminationsPartialUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **int32** | A unique integer value identifying this L2VPN termination. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnTerminationsPartialUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **patchedWritableL2VPNTerminationRequest** | [**PatchedWritableL2VPNTerminationRequest**](PatchedWritableL2VPNTerminationRequest.md) |  | 
+
+### Return type
+
+[**L2VPNTermination**](L2VPNTermination.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnTerminationsRetrieve
+
+> L2VPNTermination IpamL2vpnTerminationsRetrieve(ctx, id).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	id := int32(56) // int32 | A unique integer value identifying this L2VPN termination.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IpamAPI.IpamL2vpnTerminationsRetrieve(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnTerminationsRetrieve``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IpamL2vpnTerminationsRetrieve`: L2VPNTermination
+	fmt.Fprintf(os.Stdout, "Response from `IpamAPI.IpamL2vpnTerminationsRetrieve`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **int32** | A unique integer value identifying this L2VPN termination. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnTerminationsRetrieveRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**L2VPNTermination**](L2VPNTermination.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnTerminationsUpdate
+
+> L2VPNTermination IpamL2vpnTerminationsUpdate(ctx, id).WritableL2VPNTerminationRequest(writableL2VPNTerminationRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	id := int32(56) // int32 | A unique integer value identifying this L2VPN termination.
+	writableL2VPNTerminationRequest := *openapiclient.NewWritableL2VPNTerminationRequest(int32(123), "AssignedObjectType_example", int64(123)) // WritableL2VPNTerminationRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IpamAPI.IpamL2vpnTerminationsUpdate(context.Background(), id).WritableL2VPNTerminationRequest(writableL2VPNTerminationRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnTerminationsUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IpamL2vpnTerminationsUpdate`: L2VPNTermination
+	fmt.Fprintf(os.Stdout, "Response from `IpamAPI.IpamL2vpnTerminationsUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **int32** | A unique integer value identifying this L2VPN termination. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnTerminationsUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **writableL2VPNTerminationRequest** | [**WritableL2VPNTerminationRequest**](WritableL2VPNTerminationRequest.md) |  | 
+
+### Return type
+
+[**L2VPNTermination**](L2VPNTermination.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnsBulkDestroy
+
+> IpamL2vpnsBulkDestroy(ctx).L2VPNRequest(l2VPNRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	l2VPNRequest := []openapiclient.L2VPNRequest{*openapiclient.NewL2VPNRequest("Name_example", "Slug_example")} // []L2VPNRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.IpamAPI.IpamL2vpnsBulkDestroy(context.Background()).L2VPNRequest(l2VPNRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnsBulkDestroy``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnsBulkDestroyRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **l2VPNRequest** | [**[]L2VPNRequest**](L2VPNRequest.md) |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnsBulkPartialUpdate
+
+> []L2VPN IpamL2vpnsBulkPartialUpdate(ctx).L2VPNRequest(l2VPNRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	l2VPNRequest := []openapiclient.L2VPNRequest{*openapiclient.NewL2VPNRequest("Name_example", "Slug_example")} // []L2VPNRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IpamAPI.IpamL2vpnsBulkPartialUpdate(context.Background()).L2VPNRequest(l2VPNRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnsBulkPartialUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IpamL2vpnsBulkPartialUpdate`: []L2VPN
+	fmt.Fprintf(os.Stdout, "Response from `IpamAPI.IpamL2vpnsBulkPartialUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnsBulkPartialUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **l2VPNRequest** | [**[]L2VPNRequest**](L2VPNRequest.md) |  | 
+
+### Return type
+
+[**[]L2VPN**](L2VPN.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnsBulkUpdate
+
+> []L2VPN IpamL2vpnsBulkUpdate(ctx).L2VPNRequest(l2VPNRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	l2VPNRequest := []openapiclient.L2VPNRequest{*openapiclient.NewL2VPNRequest("Name_example", "Slug_example")} // []L2VPNRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IpamAPI.IpamL2vpnsBulkUpdate(context.Background()).L2VPNRequest(l2VPNRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnsBulkUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IpamL2vpnsBulkUpdate`: []L2VPN
+	fmt.Fprintf(os.Stdout, "Response from `IpamAPI.IpamL2vpnsBulkUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnsBulkUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **l2VPNRequest** | [**[]L2VPNRequest**](L2VPNRequest.md) |  | 
+
+### Return type
+
+[**[]L2VPN**](L2VPN.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnsCreate
+
+> L2VPN IpamL2vpnsCreate(ctx).WritableL2VPNRequest(writableL2VPNRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	writableL2VPNRequest := *openapiclient.NewWritableL2VPNRequest("Name_example", "Slug_example", openapiclient.L2VPN_type_value("vpws")) // WritableL2VPNRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IpamAPI.IpamL2vpnsCreate(context.Background()).WritableL2VPNRequest(writableL2VPNRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnsCreate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IpamL2vpnsCreate`: L2VPN
+	fmt.Fprintf(os.Stdout, "Response from `IpamAPI.IpamL2vpnsCreate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnsCreateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **writableL2VPNRequest** | [**WritableL2VPNRequest**](WritableL2VPNRequest.md) |  | 
+
+### Return type
+
+[**L2VPN**](L2VPN.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnsDestroy
+
+> IpamL2vpnsDestroy(ctx, id).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	id := int32(56) // int32 | A unique integer value identifying this L2VPN.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.IpamAPI.IpamL2vpnsDestroy(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnsDestroy``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **int32** | A unique integer value identifying this L2VPN. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnsDestroyRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnsList
+
+> PaginatedL2VPNList IpamL2vpnsList(ctx).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).ExportTarget(exportTarget).ExportTargetN(exportTargetN).ExportTargetId(exportTargetId).ExportTargetIdN(exportTargetIdN).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).Identifier(identifier).IdentifierEmpty(identifierEmpty).IdentifierGt(identifierGt).IdentifierGte(identifierGte).IdentifierLt(identifierLt).IdentifierLte(identifierLte).IdentifierN(identifierN).ImportTarget(importTarget).ImportTargetN(importTargetN).ImportTargetId(importTargetId).ImportTargetIdN(importTargetIdN).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).ModifiedByRequest(modifiedByRequest).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).Q(q).Slug(slug).SlugEmpty(slugEmpty).SlugIc(slugIc).SlugIe(slugIe).SlugIew(slugIew).SlugIsw(slugIsw).SlugN(slugN).SlugNic(slugNic).SlugNie(slugNie).SlugNiew(slugNiew).SlugNisw(slugNisw).Tag(tag).TagN(tagN).Tenant(tenant).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupN(tenantGroupN).TenantGroupId(tenantGroupId).TenantGroupIdN(tenantGroupIdN).TenantId(tenantId).TenantIdN(tenantIdN).Type_(type_).TypeN(typeN).UpdatedByRequest(updatedByRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+    "time"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	created := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdGte := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdLt := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdLte := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdN := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
+	description := []string{"Inner_example"} // []string |  (optional)
+	descriptionEmpty := true // bool |  (optional)
+	descriptionIc := []string{"Inner_example"} // []string |  (optional)
+	descriptionIe := []string{"Inner_example"} // []string |  (optional)
+	descriptionIew := []string{"Inner_example"} // []string |  (optional)
+	descriptionIsw := []string{"Inner_example"} // []string |  (optional)
+	descriptionN := []string{"Inner_example"} // []string |  (optional)
+	descriptionNic := []string{"Inner_example"} // []string |  (optional)
+	descriptionNie := []string{"Inner_example"} // []string |  (optional)
+	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
+	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
+	exportTarget := []string{"Inner_example"} // []string | Export target (name) (optional)
+	exportTargetN := []string{"Inner_example"} // []string | Export target (name) (optional)
+	exportTargetId := []int32{int32(123)} // []int32 | Export target (optional)
+	exportTargetIdN := []int32{int32(123)} // []int32 | Export target (optional)
+	id := []int32{int32(123)} // []int32 |  (optional)
+	idEmpty := true // bool |  (optional)
+	idGt := []int32{int32(123)} // []int32 |  (optional)
+	idGte := []int32{int32(123)} // []int32 |  (optional)
+	idLt := []int32{int32(123)} // []int32 |  (optional)
+	idLte := []int32{int32(123)} // []int32 |  (optional)
+	idN := []int32{int32(123)} // []int32 |  (optional)
+	identifier := []int32{int32(123)} // []int32 |  (optional)
+	identifierEmpty := true // bool |  (optional)
+	identifierGt := []int32{int32(123)} // []int32 |  (optional)
+	identifierGte := []int32{int32(123)} // []int32 |  (optional)
+	identifierLt := []int32{int32(123)} // []int32 |  (optional)
+	identifierLte := []int32{int32(123)} // []int32 |  (optional)
+	identifierN := []int32{int32(123)} // []int32 |  (optional)
+	importTarget := []string{"Inner_example"} // []string | Import target (name) (optional)
+	importTargetN := []string{"Inner_example"} // []string | Import target (name) (optional)
+	importTargetId := []int32{int32(123)} // []int32 | Import target (optional)
+	importTargetIdN := []int32{int32(123)} // []int32 | Import target (optional)
+	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedGte := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
+	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
+	name := []string{"Inner_example"} // []string |  (optional)
+	nameEmpty := true // bool |  (optional)
+	nameIc := []string{"Inner_example"} // []string |  (optional)
+	nameIe := []string{"Inner_example"} // []string |  (optional)
+	nameIew := []string{"Inner_example"} // []string |  (optional)
+	nameIsw := []string{"Inner_example"} // []string |  (optional)
+	nameN := []string{"Inner_example"} // []string |  (optional)
+	nameNic := []string{"Inner_example"} // []string |  (optional)
+	nameNie := []string{"Inner_example"} // []string |  (optional)
+	nameNiew := []string{"Inner_example"} // []string |  (optional)
+	nameNisw := []string{"Inner_example"} // []string |  (optional)
+	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
+	q := "q_example" // string | Search (optional)
+	slug := []string{"Inner_example"} // []string |  (optional)
+	slugEmpty := true // bool |  (optional)
+	slugIc := []string{"Inner_example"} // []string |  (optional)
+	slugIe := []string{"Inner_example"} // []string |  (optional)
+	slugIew := []string{"Inner_example"} // []string |  (optional)
+	slugIsw := []string{"Inner_example"} // []string |  (optional)
+	slugN := []string{"Inner_example"} // []string |  (optional)
+	slugNic := []string{"Inner_example"} // []string |  (optional)
+	slugNie := []string{"Inner_example"} // []string |  (optional)
+	slugNiew := []string{"Inner_example"} // []string |  (optional)
+	slugNisw := []string{"Inner_example"} // []string |  (optional)
+	tag := []string{"Inner_example"} // []string |  (optional)
+	tagN := []string{"Inner_example"} // []string |  (optional)
+	tenant := []string{"Inner_example"} // []string | Tenant (slug) (optional)
+	tenantN := []string{"Inner_example"} // []string | Tenant (slug) (optional)
+	tenantGroup := []int32{int32(123)} // []int32 | Tenant Group (slug) (optional)
+	tenantGroupN := []int32{int32(123)} // []int32 | Tenant Group (slug) (optional)
+	tenantGroupId := []int32{int32(123)} // []int32 | Tenant Group (ID) (optional)
+	tenantGroupIdN := []int32{int32(123)} // []int32 | Tenant Group (ID) (optional)
+	tenantId := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
+	tenantIdN := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
+	type_ := []string{"Inner_example"} // []string |  (optional)
+	typeN := []string{"Inner_example"} // []string |  (optional)
+	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IpamAPI.IpamL2vpnsList(context.Background()).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).ExportTarget(exportTarget).ExportTargetN(exportTargetN).ExportTargetId(exportTargetId).ExportTargetIdN(exportTargetIdN).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).Identifier(identifier).IdentifierEmpty(identifierEmpty).IdentifierGt(identifierGt).IdentifierGte(identifierGte).IdentifierLt(identifierLt).IdentifierLte(identifierLte).IdentifierN(identifierN).ImportTarget(importTarget).ImportTargetN(importTargetN).ImportTargetId(importTargetId).ImportTargetIdN(importTargetIdN).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).ModifiedByRequest(modifiedByRequest).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).Q(q).Slug(slug).SlugEmpty(slugEmpty).SlugIc(slugIc).SlugIe(slugIe).SlugIew(slugIew).SlugIsw(slugIsw).SlugN(slugN).SlugNic(slugNic).SlugNie(slugNie).SlugNiew(slugNiew).SlugNisw(slugNisw).Tag(tag).TagN(tagN).Tenant(tenant).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupN(tenantGroupN).TenantGroupId(tenantGroupId).TenantGroupIdN(tenantGroupIdN).TenantId(tenantId).TenantIdN(tenantIdN).Type_(type_).TypeN(typeN).UpdatedByRequest(updatedByRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnsList``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IpamL2vpnsList`: PaginatedL2VPNList
+	fmt.Fprintf(os.Stdout, "Response from `IpamAPI.IpamL2vpnsList`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnsListRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **created** | [**[]time.Time**](time.Time.md) |  | 
+ **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
+ **createdGt** | [**[]time.Time**](time.Time.md) |  | 
+ **createdGte** | [**[]time.Time**](time.Time.md) |  | 
+ **createdLt** | [**[]time.Time**](time.Time.md) |  | 
+ **createdLte** | [**[]time.Time**](time.Time.md) |  | 
+ **createdN** | [**[]time.Time**](time.Time.md) |  | 
+ **createdByRequest** | **string** |  | 
+ **description** | **[]string** |  | 
+ **descriptionEmpty** | **bool** |  | 
+ **descriptionIc** | **[]string** |  | 
+ **descriptionIe** | **[]string** |  | 
+ **descriptionIew** | **[]string** |  | 
+ **descriptionIsw** | **[]string** |  | 
+ **descriptionN** | **[]string** |  | 
+ **descriptionNic** | **[]string** |  | 
+ **descriptionNie** | **[]string** |  | 
+ **descriptionNiew** | **[]string** |  | 
+ **descriptionNisw** | **[]string** |  | 
+ **exportTarget** | **[]string** | Export target (name) | 
+ **exportTargetN** | **[]string** | Export target (name) | 
+ **exportTargetId** | **[]int32** | Export target | 
+ **exportTargetIdN** | **[]int32** | Export target | 
+ **id** | **[]int32** |  | 
+ **idEmpty** | **bool** |  | 
+ **idGt** | **[]int32** |  | 
+ **idGte** | **[]int32** |  | 
+ **idLt** | **[]int32** |  | 
+ **idLte** | **[]int32** |  | 
+ **idN** | **[]int32** |  | 
+ **identifier** | **[]int32** |  | 
+ **identifierEmpty** | **bool** |  | 
+ **identifierGt** | **[]int32** |  | 
+ **identifierGte** | **[]int32** |  | 
+ **identifierLt** | **[]int32** |  | 
+ **identifierLte** | **[]int32** |  | 
+ **identifierN** | **[]int32** |  | 
+ **importTarget** | **[]string** | Import target (name) | 
+ **importTargetN** | **[]string** | Import target (name) | 
+ **importTargetId** | **[]int32** | Import target | 
+ **importTargetIdN** | **[]int32** | Import target | 
+ **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedGte** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
+ **limit** | **int32** | Number of results to return per page. | 
+ **modifiedByRequest** | **string** |  | 
+ **name** | **[]string** |  | 
+ **nameEmpty** | **bool** |  | 
+ **nameIc** | **[]string** |  | 
+ **nameIe** | **[]string** |  | 
+ **nameIew** | **[]string** |  | 
+ **nameIsw** | **[]string** |  | 
+ **nameN** | **[]string** |  | 
+ **nameNic** | **[]string** |  | 
+ **nameNie** | **[]string** |  | 
+ **nameNiew** | **[]string** |  | 
+ **nameNisw** | **[]string** |  | 
+ **offset** | **int32** | The initial index from which to return the results. | 
+ **ordering** | **string** | Which field to use when ordering the results. | 
+ **q** | **string** | Search | 
+ **slug** | **[]string** |  | 
+ **slugEmpty** | **bool** |  | 
+ **slugIc** | **[]string** |  | 
+ **slugIe** | **[]string** |  | 
+ **slugIew** | **[]string** |  | 
+ **slugIsw** | **[]string** |  | 
+ **slugN** | **[]string** |  | 
+ **slugNic** | **[]string** |  | 
+ **slugNie** | **[]string** |  | 
+ **slugNiew** | **[]string** |  | 
+ **slugNisw** | **[]string** |  | 
+ **tag** | **[]string** |  | 
+ **tagN** | **[]string** |  | 
+ **tenant** | **[]string** | Tenant (slug) | 
+ **tenantN** | **[]string** | Tenant (slug) | 
+ **tenantGroup** | **[]int32** | Tenant Group (slug) | 
+ **tenantGroupN** | **[]int32** | Tenant Group (slug) | 
+ **tenantGroupId** | **[]int32** | Tenant Group (ID) | 
+ **tenantGroupIdN** | **[]int32** | Tenant Group (ID) | 
+ **tenantId** | **[]int32** | Tenant (ID) | 
+ **tenantIdN** | **[]int32** | Tenant (ID) | 
+ **type_** | **[]string** |  | 
+ **typeN** | **[]string** |  | 
+ **updatedByRequest** | **string** |  | 
+
+### Return type
+
+[**PaginatedL2VPNList**](PaginatedL2VPNList.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnsPartialUpdate
+
+> L2VPN IpamL2vpnsPartialUpdate(ctx, id).PatchedWritableL2VPNRequest(patchedWritableL2VPNRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	id := int32(56) // int32 | A unique integer value identifying this L2VPN.
+	patchedWritableL2VPNRequest := *openapiclient.NewPatchedWritableL2VPNRequest() // PatchedWritableL2VPNRequest |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IpamAPI.IpamL2vpnsPartialUpdate(context.Background(), id).PatchedWritableL2VPNRequest(patchedWritableL2VPNRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnsPartialUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IpamL2vpnsPartialUpdate`: L2VPN
+	fmt.Fprintf(os.Stdout, "Response from `IpamAPI.IpamL2vpnsPartialUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **int32** | A unique integer value identifying this L2VPN. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnsPartialUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **patchedWritableL2VPNRequest** | [**PatchedWritableL2VPNRequest**](PatchedWritableL2VPNRequest.md) |  | 
+
+### Return type
+
+[**L2VPN**](L2VPN.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnsRetrieve
+
+> L2VPN IpamL2vpnsRetrieve(ctx, id).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	id := int32(56) // int32 | A unique integer value identifying this L2VPN.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IpamAPI.IpamL2vpnsRetrieve(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnsRetrieve``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IpamL2vpnsRetrieve`: L2VPN
+	fmt.Fprintf(os.Stdout, "Response from `IpamAPI.IpamL2vpnsRetrieve`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **int32** | A unique integer value identifying this L2VPN. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnsRetrieveRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**L2VPN**](L2VPN.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IpamL2vpnsUpdate
+
+> L2VPN IpamL2vpnsUpdate(ctx, id).WritableL2VPNRequest(writableL2VPNRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/netbox-community/go-netbox/v3"
+)
+
+func main() {
+	id := int32(56) // int32 | A unique integer value identifying this L2VPN.
+	writableL2VPNRequest := *openapiclient.NewWritableL2VPNRequest("Name_example", "Slug_example", openapiclient.L2VPN_type_value("vpws")) // WritableL2VPNRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IpamAPI.IpamL2vpnsUpdate(context.Background(), id).WritableL2VPNRequest(writableL2VPNRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamL2vpnsUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IpamL2vpnsUpdate`: L2VPN
+	fmt.Fprintf(os.Stdout, "Response from `IpamAPI.IpamL2vpnsUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **int32** | A unique integer value identifying this L2VPN. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIpamL2vpnsUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **writableL2VPNRequest** | [**WritableL2VPNRequest**](WritableL2VPNRequest.md) |  | 
+
+### Return type
+
+[**L2VPN**](L2VPN.md)
 
 ### Authorization
 

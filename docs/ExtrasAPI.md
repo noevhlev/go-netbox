@@ -68,15 +68,6 @@ Method | HTTP request | Description
 [**ExtrasDashboardPartialUpdate**](ExtrasAPI.md#ExtrasDashboardPartialUpdate) | **Patch** /api/extras/dashboard/ | 
 [**ExtrasDashboardRetrieve**](ExtrasAPI.md#ExtrasDashboardRetrieve) | **Get** /api/extras/dashboard/ | 
 [**ExtrasDashboardUpdate**](ExtrasAPI.md#ExtrasDashboardUpdate) | **Put** /api/extras/dashboard/ | 
-[**ExtrasEventRulesBulkDestroy**](ExtrasAPI.md#ExtrasEventRulesBulkDestroy) | **Delete** /api/extras/event-rules/ | 
-[**ExtrasEventRulesBulkPartialUpdate**](ExtrasAPI.md#ExtrasEventRulesBulkPartialUpdate) | **Patch** /api/extras/event-rules/ | 
-[**ExtrasEventRulesBulkUpdate**](ExtrasAPI.md#ExtrasEventRulesBulkUpdate) | **Put** /api/extras/event-rules/ | 
-[**ExtrasEventRulesCreate**](ExtrasAPI.md#ExtrasEventRulesCreate) | **Post** /api/extras/event-rules/ | 
-[**ExtrasEventRulesDestroy**](ExtrasAPI.md#ExtrasEventRulesDestroy) | **Delete** /api/extras/event-rules/{id}/ | 
-[**ExtrasEventRulesList**](ExtrasAPI.md#ExtrasEventRulesList) | **Get** /api/extras/event-rules/ | 
-[**ExtrasEventRulesPartialUpdate**](ExtrasAPI.md#ExtrasEventRulesPartialUpdate) | **Patch** /api/extras/event-rules/{id}/ | 
-[**ExtrasEventRulesRetrieve**](ExtrasAPI.md#ExtrasEventRulesRetrieve) | **Get** /api/extras/event-rules/{id}/ | 
-[**ExtrasEventRulesUpdate**](ExtrasAPI.md#ExtrasEventRulesUpdate) | **Put** /api/extras/event-rules/{id}/ | 
 [**ExtrasExportTemplatesBulkDestroy**](ExtrasAPI.md#ExtrasExportTemplatesBulkDestroy) | **Delete** /api/extras/export-templates/ | 
 [**ExtrasExportTemplatesBulkPartialUpdate**](ExtrasAPI.md#ExtrasExportTemplatesBulkPartialUpdate) | **Patch** /api/extras/export-templates/ | 
 [**ExtrasExportTemplatesBulkUpdate**](ExtrasAPI.md#ExtrasExportTemplatesBulkUpdate) | **Put** /api/extras/export-templates/ | 
@@ -3788,7 +3779,7 @@ Name | Type | Description  | Notes
 
 ## ExtrasCustomFieldsList
 
-> PaginatedCustomFieldList ExtrasCustomFieldsList(ctx).ChoiceSet(choiceSet).ChoiceSetN(choiceSetN).ChoiceSetId(choiceSetId).ChoiceSetIdN(choiceSetIdN).ContentTypeId(contentTypeId).ContentTypeIdEmpty(contentTypeIdEmpty).ContentTypeIdGt(contentTypeIdGt).ContentTypeIdGte(contentTypeIdGte).ContentTypeIdLt(contentTypeIdLt).ContentTypeIdLte(contentTypeIdLte).ContentTypeIdN(contentTypeIdN).ContentTypes(contentTypes).ContentTypesIc(contentTypesIc).ContentTypesIe(contentTypesIe).ContentTypesIew(contentTypesIew).ContentTypesIsw(contentTypesIsw).ContentTypesN(contentTypesN).ContentTypesNic(contentTypesNic).ContentTypesNie(contentTypesNie).ContentTypesNiew(contentTypesNiew).ContentTypesNisw(contentTypesNisw).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).FilterLogic(filterLogic).FilterLogicN(filterLogicN).GroupName(groupName).GroupNameEmpty(groupNameEmpty).GroupNameIc(groupNameIc).GroupNameIe(groupNameIe).GroupNameIew(groupNameIew).GroupNameIsw(groupNameIsw).GroupNameN(groupNameN).GroupNameNic(groupNameNic).GroupNameNie(groupNameNie).GroupNameNiew(groupNameNiew).GroupNameNisw(groupNameNisw).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).IsCloneable(isCloneable).Limit(limit).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).Q(q).Required(required).SearchWeight(searchWeight).SearchWeightEmpty(searchWeightEmpty).SearchWeightGt(searchWeightGt).SearchWeightGte(searchWeightGte).SearchWeightLt(searchWeightLt).SearchWeightLte(searchWeightLte).SearchWeightN(searchWeightN).Type_(type_).TypeN(typeN).UiEditable(uiEditable).UiEditableN(uiEditableN).UiVisible(uiVisible).UiVisibleN(uiVisibleN).Weight(weight).WeightEmpty(weightEmpty).WeightGt(weightGt).WeightGte(weightGte).WeightLt(weightLt).WeightLte(weightLte).WeightN(weightN).Execute()
+> PaginatedCustomFieldList ExtrasCustomFieldsList(ctx).ChoiceSet(choiceSet).ChoiceSetN(choiceSetN).ChoiceSetId(choiceSetId).ChoiceSetIdN(choiceSetIdN).ContentTypeId(contentTypeId).ContentTypeIdEmpty(contentTypeIdEmpty).ContentTypeIdGt(contentTypeIdGt).ContentTypeIdGte(contentTypeIdGte).ContentTypeIdLt(contentTypeIdLt).ContentTypeIdLte(contentTypeIdLte).ContentTypeIdN(contentTypeIdN).ContentTypes(contentTypes).ContentTypesIc(contentTypesIc).ContentTypesIe(contentTypesIe).ContentTypesIew(contentTypesIew).ContentTypesIsw(contentTypesIsw).ContentTypesN(contentTypesN).ContentTypesNic(contentTypesNic).ContentTypesNie(contentTypesNie).ContentTypesNiew(contentTypesNiew).ContentTypesNisw(contentTypesNisw).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).FilterLogic(filterLogic).FilterLogicN(filterLogicN).GroupName(groupName).GroupNameEmpty(groupNameEmpty).GroupNameIc(groupNameIc).GroupNameIe(groupNameIe).GroupNameIew(groupNameIew).GroupNameIsw(groupNameIsw).GroupNameN(groupNameN).GroupNameNic(groupNameNic).GroupNameNie(groupNameNie).GroupNameNiew(groupNameNiew).GroupNameNisw(groupNameNisw).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).IsCloneable(isCloneable).Limit(limit).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).Q(q).Required(required).SearchWeight(searchWeight).SearchWeightEmpty(searchWeightEmpty).SearchWeightGt(searchWeightGt).SearchWeightGte(searchWeightGte).SearchWeightLt(searchWeightLt).SearchWeightLte(searchWeightLte).SearchWeightN(searchWeightN).Type_(type_).TypeN(typeN).UiVisibility(uiVisibility).UiVisibilityN(uiVisibilityN).Weight(weight).WeightEmpty(weightEmpty).WeightGt(weightGt).WeightGte(weightGte).WeightLt(weightLt).WeightLte(weightLte).WeightN(weightN).Execute()
 
 
 
@@ -3885,10 +3876,8 @@ func main() {
 	searchWeightN := []int32{int32(123)} // []int32 |  (optional)
 	type_ := []string{"Inner_example"} // []string | The type of data this custom field holds (optional)
 	typeN := []string{"Inner_example"} // []string | The type of data this custom field holds (optional)
-	uiEditable := "uiEditable_example" // string | Specifies whether the custom field value can be edited in the UI (optional)
-	uiEditableN := "uiEditableN_example" // string | Specifies whether the custom field value can be edited in the UI (optional)
-	uiVisible := "uiVisible_example" // string | Specifies whether the custom field is displayed in the UI (optional)
-	uiVisibleN := "uiVisibleN_example" // string | Specifies whether the custom field is displayed in the UI (optional)
+	uiVisibility := "uiVisibility_example" // string | Specifies the visibility of custom field in the UI (optional)
+	uiVisibilityN := "uiVisibilityN_example" // string | Specifies the visibility of custom field in the UI (optional)
 	weight := []int32{int32(123)} // []int32 |  (optional)
 	weightEmpty := true // bool |  (optional)
 	weightGt := []int32{int32(123)} // []int32 |  (optional)
@@ -3899,7 +3888,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ExtrasAPI.ExtrasCustomFieldsList(context.Background()).ChoiceSet(choiceSet).ChoiceSetN(choiceSetN).ChoiceSetId(choiceSetId).ChoiceSetIdN(choiceSetIdN).ContentTypeId(contentTypeId).ContentTypeIdEmpty(contentTypeIdEmpty).ContentTypeIdGt(contentTypeIdGt).ContentTypeIdGte(contentTypeIdGte).ContentTypeIdLt(contentTypeIdLt).ContentTypeIdLte(contentTypeIdLte).ContentTypeIdN(contentTypeIdN).ContentTypes(contentTypes).ContentTypesIc(contentTypesIc).ContentTypesIe(contentTypesIe).ContentTypesIew(contentTypesIew).ContentTypesIsw(contentTypesIsw).ContentTypesN(contentTypesN).ContentTypesNic(contentTypesNic).ContentTypesNie(contentTypesNie).ContentTypesNiew(contentTypesNiew).ContentTypesNisw(contentTypesNisw).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).FilterLogic(filterLogic).FilterLogicN(filterLogicN).GroupName(groupName).GroupNameEmpty(groupNameEmpty).GroupNameIc(groupNameIc).GroupNameIe(groupNameIe).GroupNameIew(groupNameIew).GroupNameIsw(groupNameIsw).GroupNameN(groupNameN).GroupNameNic(groupNameNic).GroupNameNie(groupNameNie).GroupNameNiew(groupNameNiew).GroupNameNisw(groupNameNisw).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).IsCloneable(isCloneable).Limit(limit).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).Q(q).Required(required).SearchWeight(searchWeight).SearchWeightEmpty(searchWeightEmpty).SearchWeightGt(searchWeightGt).SearchWeightGte(searchWeightGte).SearchWeightLt(searchWeightLt).SearchWeightLte(searchWeightLte).SearchWeightN(searchWeightN).Type_(type_).TypeN(typeN).UiEditable(uiEditable).UiEditableN(uiEditableN).UiVisible(uiVisible).UiVisibleN(uiVisibleN).Weight(weight).WeightEmpty(weightEmpty).WeightGt(weightGt).WeightGte(weightGte).WeightLt(weightLt).WeightLte(weightLte).WeightN(weightN).Execute()
+	resp, r, err := apiClient.ExtrasAPI.ExtrasCustomFieldsList(context.Background()).ChoiceSet(choiceSet).ChoiceSetN(choiceSetN).ChoiceSetId(choiceSetId).ChoiceSetIdN(choiceSetIdN).ContentTypeId(contentTypeId).ContentTypeIdEmpty(contentTypeIdEmpty).ContentTypeIdGt(contentTypeIdGt).ContentTypeIdGte(contentTypeIdGte).ContentTypeIdLt(contentTypeIdLt).ContentTypeIdLte(contentTypeIdLte).ContentTypeIdN(contentTypeIdN).ContentTypes(contentTypes).ContentTypesIc(contentTypesIc).ContentTypesIe(contentTypesIe).ContentTypesIew(contentTypesIew).ContentTypesIsw(contentTypesIsw).ContentTypesN(contentTypesN).ContentTypesNic(contentTypesNic).ContentTypesNie(contentTypesNie).ContentTypesNiew(contentTypesNiew).ContentTypesNisw(contentTypesNisw).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).FilterLogic(filterLogic).FilterLogicN(filterLogicN).GroupName(groupName).GroupNameEmpty(groupNameEmpty).GroupNameIc(groupNameIc).GroupNameIe(groupNameIe).GroupNameIew(groupNameIew).GroupNameIsw(groupNameIsw).GroupNameN(groupNameN).GroupNameNic(groupNameNic).GroupNameNie(groupNameNie).GroupNameNiew(groupNameNiew).GroupNameNisw(groupNameNisw).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).IsCloneable(isCloneable).Limit(limit).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).Q(q).Required(required).SearchWeight(searchWeight).SearchWeightEmpty(searchWeightEmpty).SearchWeightGt(searchWeightGt).SearchWeightGte(searchWeightGte).SearchWeightLt(searchWeightLt).SearchWeightLte(searchWeightLte).SearchWeightN(searchWeightN).Type_(type_).TypeN(typeN).UiVisibility(uiVisibility).UiVisibilityN(uiVisibilityN).Weight(weight).WeightEmpty(weightEmpty).WeightGt(weightGt).WeightGte(weightGte).WeightLt(weightLt).WeightLte(weightLte).WeightN(weightN).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasCustomFieldsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3998,10 +3987,8 @@ Name | Type | Description  | Notes
  **searchWeightN** | **[]int32** |  | 
  **type_** | **[]string** | The type of data this custom field holds | 
  **typeN** | **[]string** | The type of data this custom field holds | 
- **uiEditable** | **string** | Specifies whether the custom field value can be edited in the UI | 
- **uiEditableN** | **string** | Specifies whether the custom field value can be edited in the UI | 
- **uiVisible** | **string** | Specifies whether the custom field is displayed in the UI | 
- **uiVisibleN** | **string** | Specifies whether the custom field is displayed in the UI | 
+ **uiVisibility** | **string** | Specifies the visibility of custom field in the UI | 
+ **uiVisibilityN** | **string** | Specifies the visibility of custom field in the UI | 
  **weight** | **[]int32** |  | 
  **weightEmpty** | **bool** |  | 
  **weightGt** | **[]int32** |  | 
@@ -5245,787 +5232,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Dashboard**](Dashboard.md)
-
-### Authorization
-
-[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json, multipart/form-data
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## ExtrasEventRulesBulkDestroy
-
-> ExtrasEventRulesBulkDestroy(ctx).EventRuleRequest(eventRuleRequest).Execute()
-
-
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/netbox-community/go-netbox/v3"
-)
-
-func main() {
-	eventRuleRequest := []openapiclient.EventRuleRequest{*openapiclient.NewEventRuleRequest([]string{"ContentTypes_example"}, "Name_example", openapiclient.EventRule_action_type_value("webhook"), "ActionObjectType_example")} // []EventRuleRequest | 
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.ExtrasAPI.ExtrasEventRulesBulkDestroy(context.Background()).EventRuleRequest(eventRuleRequest).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasEventRulesBulkDestroy``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiExtrasEventRulesBulkDestroyRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventRuleRequest** | [**[]EventRuleRequest**](EventRuleRequest.md) |  | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json, multipart/form-data
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## ExtrasEventRulesBulkPartialUpdate
-
-> []EventRule ExtrasEventRulesBulkPartialUpdate(ctx).EventRuleRequest(eventRuleRequest).Execute()
-
-
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/netbox-community/go-netbox/v3"
-)
-
-func main() {
-	eventRuleRequest := []openapiclient.EventRuleRequest{*openapiclient.NewEventRuleRequest([]string{"ContentTypes_example"}, "Name_example", openapiclient.EventRule_action_type_value("webhook"), "ActionObjectType_example")} // []EventRuleRequest | 
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ExtrasAPI.ExtrasEventRulesBulkPartialUpdate(context.Background()).EventRuleRequest(eventRuleRequest).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasEventRulesBulkPartialUpdate``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `ExtrasEventRulesBulkPartialUpdate`: []EventRule
-	fmt.Fprintf(os.Stdout, "Response from `ExtrasAPI.ExtrasEventRulesBulkPartialUpdate`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiExtrasEventRulesBulkPartialUpdateRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventRuleRequest** | [**[]EventRuleRequest**](EventRuleRequest.md) |  | 
-
-### Return type
-
-[**[]EventRule**](EventRule.md)
-
-### Authorization
-
-[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json, multipart/form-data
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## ExtrasEventRulesBulkUpdate
-
-> []EventRule ExtrasEventRulesBulkUpdate(ctx).EventRuleRequest(eventRuleRequest).Execute()
-
-
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/netbox-community/go-netbox/v3"
-)
-
-func main() {
-	eventRuleRequest := []openapiclient.EventRuleRequest{*openapiclient.NewEventRuleRequest([]string{"ContentTypes_example"}, "Name_example", openapiclient.EventRule_action_type_value("webhook"), "ActionObjectType_example")} // []EventRuleRequest | 
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ExtrasAPI.ExtrasEventRulesBulkUpdate(context.Background()).EventRuleRequest(eventRuleRequest).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasEventRulesBulkUpdate``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `ExtrasEventRulesBulkUpdate`: []EventRule
-	fmt.Fprintf(os.Stdout, "Response from `ExtrasAPI.ExtrasEventRulesBulkUpdate`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiExtrasEventRulesBulkUpdateRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventRuleRequest** | [**[]EventRuleRequest**](EventRuleRequest.md) |  | 
-
-### Return type
-
-[**[]EventRule**](EventRule.md)
-
-### Authorization
-
-[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json, multipart/form-data
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## ExtrasEventRulesCreate
-
-> EventRule ExtrasEventRulesCreate(ctx).WritableEventRuleRequest(writableEventRuleRequest).Execute()
-
-
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/netbox-community/go-netbox/v3"
-)
-
-func main() {
-	writableEventRuleRequest := *openapiclient.NewWritableEventRuleRequest([]string{"ContentTypes_example"}, "Name_example", "ActionObjectType_example") // WritableEventRuleRequest | 
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ExtrasAPI.ExtrasEventRulesCreate(context.Background()).WritableEventRuleRequest(writableEventRuleRequest).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasEventRulesCreate``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `ExtrasEventRulesCreate`: EventRule
-	fmt.Fprintf(os.Stdout, "Response from `ExtrasAPI.ExtrasEventRulesCreate`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiExtrasEventRulesCreateRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **writableEventRuleRequest** | [**WritableEventRuleRequest**](WritableEventRuleRequest.md) |  | 
-
-### Return type
-
-[**EventRule**](EventRule.md)
-
-### Authorization
-
-[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json, multipart/form-data
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## ExtrasEventRulesDestroy
-
-> ExtrasEventRulesDestroy(ctx, id).Execute()
-
-
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/netbox-community/go-netbox/v3"
-)
-
-func main() {
-	id := int32(56) // int32 | A unique integer value identifying this event rule.
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.ExtrasAPI.ExtrasEventRulesDestroy(context.Background(), id).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasEventRulesDestroy``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this event rule. | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiExtrasEventRulesDestroyRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## ExtrasEventRulesList
-
-> PaginatedEventRuleList ExtrasEventRulesList(ctx).ActionObjectId(actionObjectId).ActionObjectIdEmpty(actionObjectIdEmpty).ActionObjectIdGt(actionObjectIdGt).ActionObjectIdGte(actionObjectIdGte).ActionObjectIdLt(actionObjectIdLt).ActionObjectIdLte(actionObjectIdLte).ActionObjectIdN(actionObjectIdN).ActionObjectType(actionObjectType).ActionObjectTypeN(actionObjectTypeN).ActionType(actionType).ActionTypeN(actionTypeN).ContentTypeId(contentTypeId).ContentTypeIdEmpty(contentTypeIdEmpty).ContentTypeIdGt(contentTypeIdGt).ContentTypeIdGte(contentTypeIdGte).ContentTypeIdLt(contentTypeIdLt).ContentTypeIdLte(contentTypeIdLte).ContentTypeIdN(contentTypeIdN).ContentTypes(contentTypes).ContentTypesIc(contentTypesIc).ContentTypesIe(contentTypesIe).ContentTypesIew(contentTypesIew).ContentTypesIsw(contentTypesIsw).ContentTypesN(contentTypesN).ContentTypesNic(contentTypesNic).ContentTypesNie(contentTypesNie).ContentTypesNiew(contentTypesNiew).ContentTypesNisw(contentTypesNisw).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).Enabled(enabled).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).ModifiedByRequest(modifiedByRequest).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).Q(q).Tag(tag).TagN(tagN).TypeCreate(typeCreate).TypeDelete(typeDelete).TypeJobEnd(typeJobEnd).TypeJobStart(typeJobStart).TypeUpdate(typeUpdate).UpdatedByRequest(updatedByRequest).Execute()
-
-
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-    "time"
-	openapiclient "github.com/netbox-community/go-netbox/v3"
-)
-
-func main() {
-	actionObjectId := []int32{int32(123)} // []int32 |  (optional)
-	actionObjectIdEmpty := []int32{int32(123)} // []int32 |  (optional)
-	actionObjectIdGt := []int32{int32(123)} // []int32 |  (optional)
-	actionObjectIdGte := []int32{int32(123)} // []int32 |  (optional)
-	actionObjectIdLt := []int32{int32(123)} // []int32 |  (optional)
-	actionObjectIdLte := []int32{int32(123)} // []int32 |  (optional)
-	actionObjectIdN := []int32{int32(123)} // []int32 |  (optional)
-	actionObjectType := "actionObjectType_example" // string |  (optional)
-	actionObjectTypeN := "actionObjectTypeN_example" // string |  (optional)
-	actionType := []string{"Inner_example"} // []string |  (optional)
-	actionTypeN := []string{"Inner_example"} // []string |  (optional)
-	contentTypeId := []int32{int32(123)} // []int32 |  (optional)
-	contentTypeIdEmpty := []int32{int32(123)} // []int32 |  (optional)
-	contentTypeIdGt := []int32{int32(123)} // []int32 |  (optional)
-	contentTypeIdGte := []int32{int32(123)} // []int32 |  (optional)
-	contentTypeIdLt := []int32{int32(123)} // []int32 |  (optional)
-	contentTypeIdLte := []int32{int32(123)} // []int32 |  (optional)
-	contentTypeIdN := []int32{int32(123)} // []int32 |  (optional)
-	contentTypes := "contentTypes_example" // string |  (optional)
-	contentTypesIc := "contentTypesIc_example" // string |  (optional)
-	contentTypesIe := "contentTypesIe_example" // string |  (optional)
-	contentTypesIew := "contentTypesIew_example" // string |  (optional)
-	contentTypesIsw := "contentTypesIsw_example" // string |  (optional)
-	contentTypesN := "contentTypesN_example" // string |  (optional)
-	contentTypesNic := "contentTypesNic_example" // string |  (optional)
-	contentTypesNie := "contentTypesNie_example" // string |  (optional)
-	contentTypesNiew := "contentTypesNiew_example" // string |  (optional)
-	contentTypesNisw := "contentTypesNisw_example" // string |  (optional)
-	created := []time.Time{time.Now()} // []time.Time |  (optional)
-	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
-	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
-	createdGte := []time.Time{time.Now()} // []time.Time |  (optional)
-	createdLt := []time.Time{time.Now()} // []time.Time |  (optional)
-	createdLte := []time.Time{time.Now()} // []time.Time |  (optional)
-	createdN := []time.Time{time.Now()} // []time.Time |  (optional)
-	createdByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	description := []string{"Inner_example"} // []string |  (optional)
-	descriptionEmpty := true // bool |  (optional)
-	descriptionIc := []string{"Inner_example"} // []string |  (optional)
-	descriptionIe := []string{"Inner_example"} // []string |  (optional)
-	descriptionIew := []string{"Inner_example"} // []string |  (optional)
-	descriptionIsw := []string{"Inner_example"} // []string |  (optional)
-	descriptionN := []string{"Inner_example"} // []string |  (optional)
-	descriptionNic := []string{"Inner_example"} // []string |  (optional)
-	descriptionNie := []string{"Inner_example"} // []string |  (optional)
-	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
-	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	enabled := true // bool |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
-	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
-	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
-	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
-	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
-	lastUpdatedGte := []time.Time{time.Now()} // []time.Time |  (optional)
-	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
-	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
-	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
-	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	name := []string{"Inner_example"} // []string |  (optional)
-	nameEmpty := true // bool |  (optional)
-	nameIc := []string{"Inner_example"} // []string |  (optional)
-	nameIe := []string{"Inner_example"} // []string |  (optional)
-	nameIew := []string{"Inner_example"} // []string |  (optional)
-	nameIsw := []string{"Inner_example"} // []string |  (optional)
-	nameN := []string{"Inner_example"} // []string |  (optional)
-	nameNic := []string{"Inner_example"} // []string |  (optional)
-	nameNie := []string{"Inner_example"} // []string |  (optional)
-	nameNiew := []string{"Inner_example"} // []string |  (optional)
-	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
-	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	q := "q_example" // string | Search (optional)
-	tag := []string{"Inner_example"} // []string |  (optional)
-	tagN := []string{"Inner_example"} // []string |  (optional)
-	typeCreate := true // bool |  (optional)
-	typeDelete := true // bool |  (optional)
-	typeJobEnd := true // bool |  (optional)
-	typeJobStart := true // bool |  (optional)
-	typeUpdate := true // bool |  (optional)
-	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ExtrasAPI.ExtrasEventRulesList(context.Background()).ActionObjectId(actionObjectId).ActionObjectIdEmpty(actionObjectIdEmpty).ActionObjectIdGt(actionObjectIdGt).ActionObjectIdGte(actionObjectIdGte).ActionObjectIdLt(actionObjectIdLt).ActionObjectIdLte(actionObjectIdLte).ActionObjectIdN(actionObjectIdN).ActionObjectType(actionObjectType).ActionObjectTypeN(actionObjectTypeN).ActionType(actionType).ActionTypeN(actionTypeN).ContentTypeId(contentTypeId).ContentTypeIdEmpty(contentTypeIdEmpty).ContentTypeIdGt(contentTypeIdGt).ContentTypeIdGte(contentTypeIdGte).ContentTypeIdLt(contentTypeIdLt).ContentTypeIdLte(contentTypeIdLte).ContentTypeIdN(contentTypeIdN).ContentTypes(contentTypes).ContentTypesIc(contentTypesIc).ContentTypesIe(contentTypesIe).ContentTypesIew(contentTypesIew).ContentTypesIsw(contentTypesIsw).ContentTypesN(contentTypesN).ContentTypesNic(contentTypesNic).ContentTypesNie(contentTypesNie).ContentTypesNiew(contentTypesNiew).ContentTypesNisw(contentTypesNisw).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).Enabled(enabled).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).ModifiedByRequest(modifiedByRequest).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).Q(q).Tag(tag).TagN(tagN).TypeCreate(typeCreate).TypeDelete(typeDelete).TypeJobEnd(typeJobEnd).TypeJobStart(typeJobStart).TypeUpdate(typeUpdate).UpdatedByRequest(updatedByRequest).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasEventRulesList``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `ExtrasEventRulesList`: PaginatedEventRuleList
-	fmt.Fprintf(os.Stdout, "Response from `ExtrasAPI.ExtrasEventRulesList`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiExtrasEventRulesListRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **actionObjectId** | **[]int32** |  | 
- **actionObjectIdEmpty** | **[]int32** |  | 
- **actionObjectIdGt** | **[]int32** |  | 
- **actionObjectIdGte** | **[]int32** |  | 
- **actionObjectIdLt** | **[]int32** |  | 
- **actionObjectIdLte** | **[]int32** |  | 
- **actionObjectIdN** | **[]int32** |  | 
- **actionObjectType** | **string** |  | 
- **actionObjectTypeN** | **string** |  | 
- **actionType** | **[]string** |  | 
- **actionTypeN** | **[]string** |  | 
- **contentTypeId** | **[]int32** |  | 
- **contentTypeIdEmpty** | **[]int32** |  | 
- **contentTypeIdGt** | **[]int32** |  | 
- **contentTypeIdGte** | **[]int32** |  | 
- **contentTypeIdLt** | **[]int32** |  | 
- **contentTypeIdLte** | **[]int32** |  | 
- **contentTypeIdN** | **[]int32** |  | 
- **contentTypes** | **string** |  | 
- **contentTypesIc** | **string** |  | 
- **contentTypesIe** | **string** |  | 
- **contentTypesIew** | **string** |  | 
- **contentTypesIsw** | **string** |  | 
- **contentTypesN** | **string** |  | 
- **contentTypesNic** | **string** |  | 
- **contentTypesNie** | **string** |  | 
- **contentTypesNiew** | **string** |  | 
- **contentTypesNisw** | **string** |  | 
- **created** | [**[]time.Time**](time.Time.md) |  | 
- **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
- **createdGt** | [**[]time.Time**](time.Time.md) |  | 
- **createdGte** | [**[]time.Time**](time.Time.md) |  | 
- **createdLt** | [**[]time.Time**](time.Time.md) |  | 
- **createdLte** | [**[]time.Time**](time.Time.md) |  | 
- **createdN** | [**[]time.Time**](time.Time.md) |  | 
- **createdByRequest** | **string** |  | 
- **description** | **[]string** |  | 
- **descriptionEmpty** | **bool** |  | 
- **descriptionIc** | **[]string** |  | 
- **descriptionIe** | **[]string** |  | 
- **descriptionIew** | **[]string** |  | 
- **descriptionIsw** | **[]string** |  | 
- **descriptionN** | **[]string** |  | 
- **descriptionNic** | **[]string** |  | 
- **descriptionNie** | **[]string** |  | 
- **descriptionNiew** | **[]string** |  | 
- **descriptionNisw** | **[]string** |  | 
- **enabled** | **bool** |  | 
- **id** | **[]int32** |  | 
- **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
- **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
- **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
- **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
- **lastUpdatedGte** | [**[]time.Time**](time.Time.md) |  | 
- **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
- **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
- **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
- **modifiedByRequest** | **string** |  | 
- **name** | **[]string** |  | 
- **nameEmpty** | **bool** |  | 
- **nameIc** | **[]string** |  | 
- **nameIe** | **[]string** |  | 
- **nameIew** | **[]string** |  | 
- **nameIsw** | **[]string** |  | 
- **nameN** | **[]string** |  | 
- **nameNic** | **[]string** |  | 
- **nameNie** | **[]string** |  | 
- **nameNiew** | **[]string** |  | 
- **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
- **ordering** | **string** | Which field to use when ordering the results. | 
- **q** | **string** | Search | 
- **tag** | **[]string** |  | 
- **tagN** | **[]string** |  | 
- **typeCreate** | **bool** |  | 
- **typeDelete** | **bool** |  | 
- **typeJobEnd** | **bool** |  | 
- **typeJobStart** | **bool** |  | 
- **typeUpdate** | **bool** |  | 
- **updatedByRequest** | **string** |  | 
-
-### Return type
-
-[**PaginatedEventRuleList**](PaginatedEventRuleList.md)
-
-### Authorization
-
-[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## ExtrasEventRulesPartialUpdate
-
-> EventRule ExtrasEventRulesPartialUpdate(ctx, id).PatchedWritableEventRuleRequest(patchedWritableEventRuleRequest).Execute()
-
-
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/netbox-community/go-netbox/v3"
-)
-
-func main() {
-	id := int32(56) // int32 | A unique integer value identifying this event rule.
-	patchedWritableEventRuleRequest := *openapiclient.NewPatchedWritableEventRuleRequest() // PatchedWritableEventRuleRequest |  (optional)
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ExtrasAPI.ExtrasEventRulesPartialUpdate(context.Background(), id).PatchedWritableEventRuleRequest(patchedWritableEventRuleRequest).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasEventRulesPartialUpdate``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `ExtrasEventRulesPartialUpdate`: EventRule
-	fmt.Fprintf(os.Stdout, "Response from `ExtrasAPI.ExtrasEventRulesPartialUpdate`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this event rule. | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiExtrasEventRulesPartialUpdateRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **patchedWritableEventRuleRequest** | [**PatchedWritableEventRuleRequest**](PatchedWritableEventRuleRequest.md) |  | 
-
-### Return type
-
-[**EventRule**](EventRule.md)
-
-### Authorization
-
-[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json, multipart/form-data
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## ExtrasEventRulesRetrieve
-
-> EventRule ExtrasEventRulesRetrieve(ctx, id).Execute()
-
-
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/netbox-community/go-netbox/v3"
-)
-
-func main() {
-	id := int32(56) // int32 | A unique integer value identifying this event rule.
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ExtrasAPI.ExtrasEventRulesRetrieve(context.Background(), id).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasEventRulesRetrieve``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `ExtrasEventRulesRetrieve`: EventRule
-	fmt.Fprintf(os.Stdout, "Response from `ExtrasAPI.ExtrasEventRulesRetrieve`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this event rule. | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiExtrasEventRulesRetrieveRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-### Return type
-
-[**EventRule**](EventRule.md)
-
-### Authorization
-
-[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## ExtrasEventRulesUpdate
-
-> EventRule ExtrasEventRulesUpdate(ctx, id).WritableEventRuleRequest(writableEventRuleRequest).Execute()
-
-
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/netbox-community/go-netbox/v3"
-)
-
-func main() {
-	id := int32(56) // int32 | A unique integer value identifying this event rule.
-	writableEventRuleRequest := *openapiclient.NewWritableEventRuleRequest([]string{"ContentTypes_example"}, "Name_example", "ActionObjectType_example") // WritableEventRuleRequest | 
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ExtrasAPI.ExtrasEventRulesUpdate(context.Background(), id).WritableEventRuleRequest(writableEventRuleRequest).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasEventRulesUpdate``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `ExtrasEventRulesUpdate`: EventRule
-	fmt.Fprintf(os.Stdout, "Response from `ExtrasAPI.ExtrasEventRulesUpdate`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this event rule. | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiExtrasEventRulesUpdateRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **writableEventRuleRequest** | [**WritableEventRuleRequest**](WritableEventRuleRequest.md) |  | 
-
-### Return type
-
-[**EventRule**](EventRule.md)
 
 ### Authorization
 
@@ -9997,7 +9203,7 @@ import (
 )
 
 func main() {
-	webhookRequest := []openapiclient.WebhookRequest{*openapiclient.NewWebhookRequest("Name_example", "PayloadUrl_example")} // []WebhookRequest | 
+	webhookRequest := []openapiclient.WebhookRequest{*openapiclient.NewWebhookRequest([]string{"ContentTypes_example"}, "Name_example", "PayloadUrl_example")} // []WebhookRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -10061,7 +9267,7 @@ import (
 )
 
 func main() {
-	webhookRequest := []openapiclient.WebhookRequest{*openapiclient.NewWebhookRequest("Name_example", "PayloadUrl_example")} // []WebhookRequest | 
+	webhookRequest := []openapiclient.WebhookRequest{*openapiclient.NewWebhookRequest([]string{"ContentTypes_example"}, "Name_example", "PayloadUrl_example")} // []WebhookRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -10127,7 +9333,7 @@ import (
 )
 
 func main() {
-	webhookRequest := []openapiclient.WebhookRequest{*openapiclient.NewWebhookRequest("Name_example", "PayloadUrl_example")} // []WebhookRequest | 
+	webhookRequest := []openapiclient.WebhookRequest{*openapiclient.NewWebhookRequest([]string{"ContentTypes_example"}, "Name_example", "PayloadUrl_example")} // []WebhookRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -10193,7 +9399,7 @@ import (
 )
 
 func main() {
-	webhookRequest := *openapiclient.NewWebhookRequest("Name_example", "PayloadUrl_example") // WebhookRequest | 
+	webhookRequest := *openapiclient.NewWebhookRequest([]string{"ContentTypes_example"}, "Name_example", "PayloadUrl_example") // WebhookRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -10308,7 +9514,7 @@ Name | Type | Description  | Notes
 
 ## ExtrasWebhooksList
 
-> PaginatedWebhookList ExtrasWebhooksList(ctx).CaFilePath(caFilePath).CaFilePathEmpty(caFilePathEmpty).CaFilePathIc(caFilePathIc).CaFilePathIe(caFilePathIe).CaFilePathIew(caFilePathIew).CaFilePathIsw(caFilePathIsw).CaFilePathN(caFilePathN).CaFilePathNic(caFilePathNic).CaFilePathNie(caFilePathNie).CaFilePathNiew(caFilePathNiew).CaFilePathNisw(caFilePathNisw).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).HttpContentType(httpContentType).HttpContentTypeEmpty(httpContentTypeEmpty).HttpContentTypeIc(httpContentTypeIc).HttpContentTypeIe(httpContentTypeIe).HttpContentTypeIew(httpContentTypeIew).HttpContentTypeIsw(httpContentTypeIsw).HttpContentTypeN(httpContentTypeN).HttpContentTypeNic(httpContentTypeNic).HttpContentTypeNie(httpContentTypeNie).HttpContentTypeNiew(httpContentTypeNiew).HttpContentTypeNisw(httpContentTypeNisw).HttpMethod(httpMethod).HttpMethodN(httpMethodN).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).ModifiedByRequest(modifiedByRequest).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).PayloadUrl(payloadUrl).Q(q).Secret(secret).SecretEmpty(secretEmpty).SecretIc(secretIc).SecretIe(secretIe).SecretIew(secretIew).SecretIsw(secretIsw).SecretN(secretN).SecretNic(secretNic).SecretNie(secretNie).SecretNiew(secretNiew).SecretNisw(secretNisw).SslVerification(sslVerification).Tag(tag).TagN(tagN).UpdatedByRequest(updatedByRequest).Execute()
+> PaginatedWebhookList ExtrasWebhooksList(ctx).CaFilePath(caFilePath).CaFilePathEmpty(caFilePathEmpty).CaFilePathIc(caFilePathIc).CaFilePathIe(caFilePathIe).CaFilePathIew(caFilePathIew).CaFilePathIsw(caFilePathIsw).CaFilePathN(caFilePathN).CaFilePathNic(caFilePathNic).CaFilePathNie(caFilePathNie).CaFilePathNiew(caFilePathNiew).CaFilePathNisw(caFilePathNisw).ContentTypeId(contentTypeId).ContentTypeIdEmpty(contentTypeIdEmpty).ContentTypeIdGt(contentTypeIdGt).ContentTypeIdGte(contentTypeIdGte).ContentTypeIdLt(contentTypeIdLt).ContentTypeIdLte(contentTypeIdLte).ContentTypeIdN(contentTypeIdN).ContentTypes(contentTypes).ContentTypesIc(contentTypesIc).ContentTypesIe(contentTypesIe).ContentTypesIew(contentTypesIew).ContentTypesIsw(contentTypesIsw).ContentTypesN(contentTypesN).ContentTypesNic(contentTypesNic).ContentTypesNie(contentTypesNie).ContentTypesNiew(contentTypesNiew).ContentTypesNisw(contentTypesNisw).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Enabled(enabled).HttpContentType(httpContentType).HttpContentTypeEmpty(httpContentTypeEmpty).HttpContentTypeIc(httpContentTypeIc).HttpContentTypeIe(httpContentTypeIe).HttpContentTypeIew(httpContentTypeIew).HttpContentTypeIsw(httpContentTypeIsw).HttpContentTypeN(httpContentTypeN).HttpContentTypeNic(httpContentTypeNic).HttpContentTypeNie(httpContentTypeNie).HttpContentTypeNiew(httpContentTypeNiew).HttpContentTypeNisw(httpContentTypeNisw).HttpMethod(httpMethod).HttpMethodN(httpMethodN).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).ModifiedByRequest(modifiedByRequest).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).PayloadUrl(payloadUrl).PayloadUrlEmpty(payloadUrlEmpty).PayloadUrlIc(payloadUrlIc).PayloadUrlIe(payloadUrlIe).PayloadUrlIew(payloadUrlIew).PayloadUrlIsw(payloadUrlIsw).PayloadUrlN(payloadUrlN).PayloadUrlNic(payloadUrlNic).PayloadUrlNie(payloadUrlNie).PayloadUrlNiew(payloadUrlNiew).PayloadUrlNisw(payloadUrlNisw).Q(q).Secret(secret).SecretEmpty(secretEmpty).SecretIc(secretIc).SecretIe(secretIe).SecretIew(secretIew).SecretIsw(secretIsw).SecretN(secretN).SecretNic(secretNic).SecretNie(secretNie).SecretNiew(secretNiew).SecretNisw(secretNisw).SslVerification(sslVerification).Tag(tag).TagN(tagN).TypeCreate(typeCreate).TypeDelete(typeDelete).TypeJobEnd(typeJobEnd).TypeJobStart(typeJobStart).TypeUpdate(typeUpdate).UpdatedByRequest(updatedByRequest).Execute()
 
 
 
@@ -10339,6 +9545,23 @@ func main() {
 	caFilePathNie := []string{"Inner_example"} // []string |  (optional)
 	caFilePathNiew := []string{"Inner_example"} // []string |  (optional)
 	caFilePathNisw := []string{"Inner_example"} // []string |  (optional)
+	contentTypeId := []int32{int32(123)} // []int32 |  (optional)
+	contentTypeIdEmpty := []int32{int32(123)} // []int32 |  (optional)
+	contentTypeIdGt := []int32{int32(123)} // []int32 |  (optional)
+	contentTypeIdGte := []int32{int32(123)} // []int32 |  (optional)
+	contentTypeIdLt := []int32{int32(123)} // []int32 |  (optional)
+	contentTypeIdLte := []int32{int32(123)} // []int32 |  (optional)
+	contentTypeIdN := []int32{int32(123)} // []int32 |  (optional)
+	contentTypes := "contentTypes_example" // string |  (optional)
+	contentTypesIc := "contentTypesIc_example" // string |  (optional)
+	contentTypesIe := "contentTypesIe_example" // string |  (optional)
+	contentTypesIew := "contentTypesIew_example" // string |  (optional)
+	contentTypesIsw := "contentTypesIsw_example" // string |  (optional)
+	contentTypesN := "contentTypesN_example" // string |  (optional)
+	contentTypesNic := "contentTypesNic_example" // string |  (optional)
+	contentTypesNie := "contentTypesNie_example" // string |  (optional)
+	contentTypesNiew := "contentTypesNiew_example" // string |  (optional)
+	contentTypesNisw := "contentTypesNisw_example" // string |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -10347,17 +9570,7 @@ func main() {
 	createdLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdN := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	description := []string{"Inner_example"} // []string |  (optional)
-	descriptionEmpty := true // bool |  (optional)
-	descriptionIc := []string{"Inner_example"} // []string |  (optional)
-	descriptionIe := []string{"Inner_example"} // []string |  (optional)
-	descriptionIew := []string{"Inner_example"} // []string |  (optional)
-	descriptionIsw := []string{"Inner_example"} // []string |  (optional)
-	descriptionN := []string{"Inner_example"} // []string |  (optional)
-	descriptionNic := []string{"Inner_example"} // []string |  (optional)
-	descriptionNie := []string{"Inner_example"} // []string |  (optional)
-	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
-	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
+	enabled := true // bool |  (optional)
 	httpContentType := []string{"Inner_example"} // []string |  (optional)
 	httpContentTypeEmpty := true // bool |  (optional)
 	httpContentTypeIc := []string{"Inner_example"} // []string |  (optional)
@@ -10401,6 +9614,16 @@ func main() {
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	payloadUrl := []string{"Inner_example"} // []string |  (optional)
+	payloadUrlEmpty := true // bool |  (optional)
+	payloadUrlIc := []string{"Inner_example"} // []string |  (optional)
+	payloadUrlIe := []string{"Inner_example"} // []string |  (optional)
+	payloadUrlIew := []string{"Inner_example"} // []string |  (optional)
+	payloadUrlIsw := []string{"Inner_example"} // []string |  (optional)
+	payloadUrlN := []string{"Inner_example"} // []string |  (optional)
+	payloadUrlNic := []string{"Inner_example"} // []string |  (optional)
+	payloadUrlNie := []string{"Inner_example"} // []string |  (optional)
+	payloadUrlNiew := []string{"Inner_example"} // []string |  (optional)
+	payloadUrlNisw := []string{"Inner_example"} // []string |  (optional)
 	q := "q_example" // string | Search (optional)
 	secret := []string{"Inner_example"} // []string |  (optional)
 	secretEmpty := true // bool |  (optional)
@@ -10416,11 +9639,16 @@ func main() {
 	sslVerification := true // bool |  (optional)
 	tag := []string{"Inner_example"} // []string |  (optional)
 	tagN := []string{"Inner_example"} // []string |  (optional)
+	typeCreate := true // bool |  (optional)
+	typeDelete := true // bool |  (optional)
+	typeJobEnd := true // bool |  (optional)
+	typeJobStart := true // bool |  (optional)
+	typeUpdate := true // bool |  (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ExtrasAPI.ExtrasWebhooksList(context.Background()).CaFilePath(caFilePath).CaFilePathEmpty(caFilePathEmpty).CaFilePathIc(caFilePathIc).CaFilePathIe(caFilePathIe).CaFilePathIew(caFilePathIew).CaFilePathIsw(caFilePathIsw).CaFilePathN(caFilePathN).CaFilePathNic(caFilePathNic).CaFilePathNie(caFilePathNie).CaFilePathNiew(caFilePathNiew).CaFilePathNisw(caFilePathNisw).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Description(description).DescriptionEmpty(descriptionEmpty).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNisw(descriptionNisw).HttpContentType(httpContentType).HttpContentTypeEmpty(httpContentTypeEmpty).HttpContentTypeIc(httpContentTypeIc).HttpContentTypeIe(httpContentTypeIe).HttpContentTypeIew(httpContentTypeIew).HttpContentTypeIsw(httpContentTypeIsw).HttpContentTypeN(httpContentTypeN).HttpContentTypeNic(httpContentTypeNic).HttpContentTypeNie(httpContentTypeNie).HttpContentTypeNiew(httpContentTypeNiew).HttpContentTypeNisw(httpContentTypeNisw).HttpMethod(httpMethod).HttpMethodN(httpMethodN).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).ModifiedByRequest(modifiedByRequest).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).PayloadUrl(payloadUrl).Q(q).Secret(secret).SecretEmpty(secretEmpty).SecretIc(secretIc).SecretIe(secretIe).SecretIew(secretIew).SecretIsw(secretIsw).SecretN(secretN).SecretNic(secretNic).SecretNie(secretNie).SecretNiew(secretNiew).SecretNisw(secretNisw).SslVerification(sslVerification).Tag(tag).TagN(tagN).UpdatedByRequest(updatedByRequest).Execute()
+	resp, r, err := apiClient.ExtrasAPI.ExtrasWebhooksList(context.Background()).CaFilePath(caFilePath).CaFilePathEmpty(caFilePathEmpty).CaFilePathIc(caFilePathIc).CaFilePathIe(caFilePathIe).CaFilePathIew(caFilePathIew).CaFilePathIsw(caFilePathIsw).CaFilePathN(caFilePathN).CaFilePathNic(caFilePathNic).CaFilePathNie(caFilePathNie).CaFilePathNiew(caFilePathNiew).CaFilePathNisw(caFilePathNisw).ContentTypeId(contentTypeId).ContentTypeIdEmpty(contentTypeIdEmpty).ContentTypeIdGt(contentTypeIdGt).ContentTypeIdGte(contentTypeIdGte).ContentTypeIdLt(contentTypeIdLt).ContentTypeIdLte(contentTypeIdLte).ContentTypeIdN(contentTypeIdN).ContentTypes(contentTypes).ContentTypesIc(contentTypesIc).ContentTypesIe(contentTypesIe).ContentTypesIew(contentTypesIew).ContentTypesIsw(contentTypesIsw).ContentTypesN(contentTypesN).ContentTypesNic(contentTypesNic).ContentTypesNie(contentTypesNie).ContentTypesNiew(contentTypesNiew).ContentTypesNisw(contentTypesNisw).Created(created).CreatedEmpty(createdEmpty).CreatedGt(createdGt).CreatedGte(createdGte).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).CreatedByRequest(createdByRequest).Enabled(enabled).HttpContentType(httpContentType).HttpContentTypeEmpty(httpContentTypeEmpty).HttpContentTypeIc(httpContentTypeIc).HttpContentTypeIe(httpContentTypeIe).HttpContentTypeIew(httpContentTypeIew).HttpContentTypeIsw(httpContentTypeIsw).HttpContentTypeN(httpContentTypeN).HttpContentTypeNic(httpContentTypeNic).HttpContentTypeNie(httpContentTypeNie).HttpContentTypeNiew(httpContentTypeNiew).HttpContentTypeNisw(httpContentTypeNisw).HttpMethod(httpMethod).HttpMethodN(httpMethodN).Id(id).IdEmpty(idEmpty).IdGt(idGt).IdGte(idGte).IdLt(idLt).IdLte(idLte).IdN(idN).LastUpdated(lastUpdated).LastUpdatedEmpty(lastUpdatedEmpty).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).ModifiedByRequest(modifiedByRequest).Name(name).NameEmpty(nameEmpty).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNisw(nameNisw).Offset(offset).Ordering(ordering).PayloadUrl(payloadUrl).PayloadUrlEmpty(payloadUrlEmpty).PayloadUrlIc(payloadUrlIc).PayloadUrlIe(payloadUrlIe).PayloadUrlIew(payloadUrlIew).PayloadUrlIsw(payloadUrlIsw).PayloadUrlN(payloadUrlN).PayloadUrlNic(payloadUrlNic).PayloadUrlNie(payloadUrlNie).PayloadUrlNiew(payloadUrlNiew).PayloadUrlNisw(payloadUrlNisw).Q(q).Secret(secret).SecretEmpty(secretEmpty).SecretIc(secretIc).SecretIe(secretIe).SecretIew(secretIew).SecretIsw(secretIsw).SecretN(secretN).SecretNic(secretNic).SecretNie(secretNie).SecretNiew(secretNiew).SecretNisw(secretNisw).SslVerification(sslVerification).Tag(tag).TagN(tagN).TypeCreate(typeCreate).TypeDelete(typeDelete).TypeJobEnd(typeJobEnd).TypeJobStart(typeJobStart).TypeUpdate(typeUpdate).UpdatedByRequest(updatedByRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasWebhooksList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -10452,6 +9680,23 @@ Name | Type | Description  | Notes
  **caFilePathNie** | **[]string** |  | 
  **caFilePathNiew** | **[]string** |  | 
  **caFilePathNisw** | **[]string** |  | 
+ **contentTypeId** | **[]int32** |  | 
+ **contentTypeIdEmpty** | **[]int32** |  | 
+ **contentTypeIdGt** | **[]int32** |  | 
+ **contentTypeIdGte** | **[]int32** |  | 
+ **contentTypeIdLt** | **[]int32** |  | 
+ **contentTypeIdLte** | **[]int32** |  | 
+ **contentTypeIdN** | **[]int32** |  | 
+ **contentTypes** | **string** |  | 
+ **contentTypesIc** | **string** |  | 
+ **contentTypesIe** | **string** |  | 
+ **contentTypesIew** | **string** |  | 
+ **contentTypesIsw** | **string** |  | 
+ **contentTypesN** | **string** |  | 
+ **contentTypesNic** | **string** |  | 
+ **contentTypesNie** | **string** |  | 
+ **contentTypesNiew** | **string** |  | 
+ **contentTypesNisw** | **string** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -10460,17 +9705,7 @@ Name | Type | Description  | Notes
  **createdLte** | [**[]time.Time**](time.Time.md) |  | 
  **createdN** | [**[]time.Time**](time.Time.md) |  | 
  **createdByRequest** | **string** |  | 
- **description** | **[]string** |  | 
- **descriptionEmpty** | **bool** |  | 
- **descriptionIc** | **[]string** |  | 
- **descriptionIe** | **[]string** |  | 
- **descriptionIew** | **[]string** |  | 
- **descriptionIsw** | **[]string** |  | 
- **descriptionN** | **[]string** |  | 
- **descriptionNic** | **[]string** |  | 
- **descriptionNie** | **[]string** |  | 
- **descriptionNiew** | **[]string** |  | 
- **descriptionNisw** | **[]string** |  | 
+ **enabled** | **bool** |  | 
  **httpContentType** | **[]string** |  | 
  **httpContentTypeEmpty** | **bool** |  | 
  **httpContentTypeIc** | **[]string** |  | 
@@ -10514,6 +9749,16 @@ Name | Type | Description  | Notes
  **offset** | **int32** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **payloadUrl** | **[]string** |  | 
+ **payloadUrlEmpty** | **bool** |  | 
+ **payloadUrlIc** | **[]string** |  | 
+ **payloadUrlIe** | **[]string** |  | 
+ **payloadUrlIew** | **[]string** |  | 
+ **payloadUrlIsw** | **[]string** |  | 
+ **payloadUrlN** | **[]string** |  | 
+ **payloadUrlNic** | **[]string** |  | 
+ **payloadUrlNie** | **[]string** |  | 
+ **payloadUrlNiew** | **[]string** |  | 
+ **payloadUrlNisw** | **[]string** |  | 
  **q** | **string** | Search | 
  **secret** | **[]string** |  | 
  **secretEmpty** | **bool** |  | 
@@ -10529,6 +9774,11 @@ Name | Type | Description  | Notes
  **sslVerification** | **bool** |  | 
  **tag** | **[]string** |  | 
  **tagN** | **[]string** |  | 
+ **typeCreate** | **bool** |  | 
+ **typeDelete** | **bool** |  | 
+ **typeJobEnd** | **bool** |  | 
+ **typeJobStart** | **bool** |  | 
+ **typeUpdate** | **bool** |  | 
  **updatedByRequest** | **string** |  | 
 
 ### Return type
@@ -10713,7 +9963,7 @@ import (
 
 func main() {
 	id := int32(56) // int32 | A unique integer value identifying this webhook.
-	webhookRequest := *openapiclient.NewWebhookRequest("Name_example", "PayloadUrl_example") // WebhookRequest | 
+	webhookRequest := *openapiclient.NewWebhookRequest([]string{"ContentTypes_example"}, "Name_example", "PayloadUrl_example") // WebhookRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)

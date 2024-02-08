@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | 
-**Type** | **string** |  | 
+**Type** | Pointer to [**DataSourceTypeValue**](DataSourceTypeValue.md) |  | [optional] 
 **SourceUrl** | **string** |  | 
 **Enabled** | Pointer to **bool** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 
 ### NewWritableDataSourceRequest
 
-`func NewWritableDataSourceRequest(name string, type_ string, sourceUrl string, ) *WritableDataSourceRequest`
+`func NewWritableDataSourceRequest(name string, sourceUrl string, ) *WritableDataSourceRequest`
 
 NewWritableDataSourceRequest instantiates a new WritableDataSourceRequest object
 This constructor will assign default values to properties that have it defined,
@@ -54,23 +54,28 @@ SetName sets Name field to given value.
 
 ### GetType
 
-`func (o *WritableDataSourceRequest) GetType() string`
+`func (o *WritableDataSourceRequest) GetType() DataSourceTypeValue`
 
 GetType returns the Type field if non-nil, zero value otherwise.
 
 ### GetTypeOk
 
-`func (o *WritableDataSourceRequest) GetTypeOk() (*string, bool)`
+`func (o *WritableDataSourceRequest) GetTypeOk() (*DataSourceTypeValue, bool)`
 
 GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetType
 
-`func (o *WritableDataSourceRequest) SetType(v string)`
+`func (o *WritableDataSourceRequest) SetType(v DataSourceTypeValue)`
 
 SetType sets Type field to given value.
 
+### HasType
+
+`func (o *WritableDataSourceRequest) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 ### GetSourceUrl
 

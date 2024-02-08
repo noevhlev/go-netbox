@@ -18,14 +18,13 @@ Name | Type | Description | Notes
 **Completed** | Pointer to **NullableTime** |  | [optional] 
 **User** | [**NestedUser**](NestedUser.md) |  | [readonly] 
 **Data** | Pointer to **interface{}** |  | [optional] 
-**Error** | **string** |  | [readonly] 
 **JobId** | **string** |  | 
 
 ## Methods
 
 ### NewJob
 
-`func NewJob(id int32, url string, display string, objectType string, name string, status JobStatus, created time.Time, user NestedUser, error_ string, jobId string, ) *Job`
+`func NewJob(id int32, url string, display string, objectType string, name string, status JobStatus, created time.Time, user NestedUser, jobId string, ) *Job`
 
 NewJob instantiates a new Job object
 This constructor will assign default values to properties that have it defined,
@@ -410,26 +409,6 @@ HasData returns a boolean if a field has been set.
 `func (o *Job) UnsetData()`
 
 UnsetData ensures that no value is present for Data, not even an explicit nil
-### GetError
-
-`func (o *Job) GetError() string`
-
-GetError returns the Error field if non-nil, zero value otherwise.
-
-### GetErrorOk
-
-`func (o *Job) GetErrorOk() (*string, bool)`
-
-GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetError
-
-`func (o *Job) SetError(v string)`
-
-SetError sets Error field to given value.
-
-
 ### GetJobId
 
 `func (o *Job) GetJobId() string`

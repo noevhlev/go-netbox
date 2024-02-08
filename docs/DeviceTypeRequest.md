@@ -10,8 +10,7 @@ Name | Type | Description | Notes
 **Slug** | **string** |  | 
 **PartNumber** | Pointer to **string** | Discrete part number (optional) | [optional] 
 **UHeight** | Pointer to **float64** |  | [optional] [default to 1.0]
-**ExcludeFromUtilization** | Pointer to **bool** | Devices of this type are excluded when calculating rack utilization. | [optional] 
-**IsFullDepth** | Pointer to **bool** | Device consumes both front and rear rack faces. | [optional] 
+**IsFullDepth** | Pointer to **bool** | Device consumes both front and rear rack faces | [optional] 
 **SubdeviceRole** | Pointer to [**NullableDeviceTypeRequestSubdeviceRole**](DeviceTypeRequestSubdeviceRole.md) |  | [optional] 
 **Airflow** | Pointer to [**NullableDeviceTypeRequestAirflow**](DeviceTypeRequestAirflow.md) |  | [optional] 
 **Weight** | Pointer to **NullableFloat64** |  | [optional] 
@@ -186,31 +185,6 @@ SetUHeight sets UHeight field to given value.
 `func (o *DeviceTypeRequest) HasUHeight() bool`
 
 HasUHeight returns a boolean if a field has been set.
-
-### GetExcludeFromUtilization
-
-`func (o *DeviceTypeRequest) GetExcludeFromUtilization() bool`
-
-GetExcludeFromUtilization returns the ExcludeFromUtilization field if non-nil, zero value otherwise.
-
-### GetExcludeFromUtilizationOk
-
-`func (o *DeviceTypeRequest) GetExcludeFromUtilizationOk() (*bool, bool)`
-
-GetExcludeFromUtilizationOk returns a tuple with the ExcludeFromUtilization field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetExcludeFromUtilization
-
-`func (o *DeviceTypeRequest) SetExcludeFromUtilization(v bool)`
-
-SetExcludeFromUtilization sets ExcludeFromUtilization field to given value.
-
-### HasExcludeFromUtilization
-
-`func (o *DeviceTypeRequest) HasExcludeFromUtilization() bool`
-
-HasExcludeFromUtilization returns a boolean if a field has been set.
 
 ### GetIsFullDepth
 

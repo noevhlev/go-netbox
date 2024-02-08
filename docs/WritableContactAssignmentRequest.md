@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **Role** | **int32** |  | 
 **Priority** | Pointer to [**ContactAssignmentPriorityValue**](ContactAssignmentPriorityValue.md) |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
-**CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
 
 ## Methods
 
@@ -160,31 +159,6 @@ SetTags sets Tags field to given value.
 `func (o *WritableContactAssignmentRequest) HasTags() bool`
 
 HasTags returns a boolean if a field has been set.
-
-### GetCustomFields
-
-`func (o *WritableContactAssignmentRequest) GetCustomFields() map[string]interface{}`
-
-GetCustomFields returns the CustomFields field if non-nil, zero value otherwise.
-
-### GetCustomFieldsOk
-
-`func (o *WritableContactAssignmentRequest) GetCustomFieldsOk() (*map[string]interface{}, bool)`
-
-GetCustomFieldsOk returns a tuple with the CustomFields field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCustomFields
-
-`func (o *WritableContactAssignmentRequest) SetCustomFields(v map[string]interface{})`
-
-SetCustomFields sets CustomFields field to given value.
-
-### HasCustomFields
-
-`func (o *WritableContactAssignmentRequest) HasCustomFields() bool`
-
-HasCustomFields returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

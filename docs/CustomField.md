@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Display** | **string** |  | [readonly] 
 **ContentTypes** | **[]string** |  | 
 **Type** | [**CustomFieldType**](CustomFieldType.md) |  | 
-**ObjectType** | Pointer to **NullableString** |  | [optional] 
+**ObjectType** | Pointer to **string** |  | [optional] 
 **DataType** | **string** |  | [readonly] 
 **Name** | **string** | Internal field name | 
 **Label** | Pointer to **string** | Name of the field as displayed to users (if not provided, &#39;the field&#39;s name will be used) | [optional] 
@@ -18,15 +18,14 @@ Name | Type | Description | Notes
 **Required** | Pointer to **bool** | If true, this field is required when creating new objects or editing an existing object. | [optional] 
 **SearchWeight** | Pointer to **int32** | Weighting for search. Lower values are considered more important. Fields with a search weight of zero will be ignored. | [optional] 
 **FilterLogic** | Pointer to [**CustomFieldFilterLogic**](CustomFieldFilterLogic.md) |  | [optional] 
-**UiVisible** | Pointer to [**CustomFieldUiVisible**](CustomFieldUiVisible.md) |  | [optional] 
-**UiEditable** | Pointer to [**CustomFieldUiEditable**](CustomFieldUiEditable.md) |  | [optional] 
+**UiVisibility** | Pointer to [**CustomFieldUiVisibility**](CustomFieldUiVisibility.md) |  | [optional] 
 **IsCloneable** | Pointer to **bool** | Replicate this value when cloning objects | [optional] 
 **Default** | Pointer to **interface{}** | Default value for the field (must be a JSON value). Encapsulate strings with double quotes (e.g. \&quot;Foo\&quot;). | [optional] 
 **Weight** | Pointer to **int32** | Fields with higher weights appear lower in a form. | [optional] 
-**ValidationMinimum** | Pointer to **NullableInt64** | Minimum allowed value (for numeric fields) | [optional] 
-**ValidationMaximum** | Pointer to **NullableInt64** | Maximum allowed value (for numeric fields) | [optional] 
+**ValidationMinimum** | Pointer to **NullableInt32** | Minimum allowed value (for numeric fields) | [optional] 
+**ValidationMaximum** | Pointer to **NullableInt32** | Maximum allowed value (for numeric fields) | [optional] 
 **ValidationRegex** | Pointer to **string** | Regular expression to enforce on text field values. Use ^ and $ to force matching of entire string. For example, &lt;code&gt;^[A-Z]{3}$&lt;/code&gt; will limit values to exactly three uppercase letters. | [optional] 
-**ChoiceSet** | Pointer to [**NullableNestedCustomFieldChoiceSet**](NestedCustomFieldChoiceSet.md) |  | [optional] 
+**ChoiceSet** | Pointer to [**NestedCustomFieldChoiceSet**](NestedCustomFieldChoiceSet.md) |  | [optional] 
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
 
@@ -174,16 +173,6 @@ SetObjectType sets ObjectType field to given value.
 
 HasObjectType returns a boolean if a field has been set.
 
-### SetObjectTypeNil
-
-`func (o *CustomField) SetObjectTypeNil(b bool)`
-
- SetObjectTypeNil sets the value for ObjectType to be an explicit nil
-
-### UnsetObjectType
-`func (o *CustomField) UnsetObjectType()`
-
-UnsetObjectType ensures that no value is present for ObjectType, not even an explicit nil
 ### GetDataType
 
 `func (o *CustomField) GetDataType() string`
@@ -374,55 +363,30 @@ SetFilterLogic sets FilterLogic field to given value.
 
 HasFilterLogic returns a boolean if a field has been set.
 
-### GetUiVisible
+### GetUiVisibility
 
-`func (o *CustomField) GetUiVisible() CustomFieldUiVisible`
+`func (o *CustomField) GetUiVisibility() CustomFieldUiVisibility`
 
-GetUiVisible returns the UiVisible field if non-nil, zero value otherwise.
+GetUiVisibility returns the UiVisibility field if non-nil, zero value otherwise.
 
-### GetUiVisibleOk
+### GetUiVisibilityOk
 
-`func (o *CustomField) GetUiVisibleOk() (*CustomFieldUiVisible, bool)`
+`func (o *CustomField) GetUiVisibilityOk() (*CustomFieldUiVisibility, bool)`
 
-GetUiVisibleOk returns a tuple with the UiVisible field if it's non-nil, zero value otherwise
+GetUiVisibilityOk returns a tuple with the UiVisibility field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUiVisible
+### SetUiVisibility
 
-`func (o *CustomField) SetUiVisible(v CustomFieldUiVisible)`
+`func (o *CustomField) SetUiVisibility(v CustomFieldUiVisibility)`
 
-SetUiVisible sets UiVisible field to given value.
+SetUiVisibility sets UiVisibility field to given value.
 
-### HasUiVisible
+### HasUiVisibility
 
-`func (o *CustomField) HasUiVisible() bool`
+`func (o *CustomField) HasUiVisibility() bool`
 
-HasUiVisible returns a boolean if a field has been set.
-
-### GetUiEditable
-
-`func (o *CustomField) GetUiEditable() CustomFieldUiEditable`
-
-GetUiEditable returns the UiEditable field if non-nil, zero value otherwise.
-
-### GetUiEditableOk
-
-`func (o *CustomField) GetUiEditableOk() (*CustomFieldUiEditable, bool)`
-
-GetUiEditableOk returns a tuple with the UiEditable field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUiEditable
-
-`func (o *CustomField) SetUiEditable(v CustomFieldUiEditable)`
-
-SetUiEditable sets UiEditable field to given value.
-
-### HasUiEditable
-
-`func (o *CustomField) HasUiEditable() bool`
-
-HasUiEditable returns a boolean if a field has been set.
+HasUiVisibility returns a boolean if a field has been set.
 
 ### GetIsCloneable
 
@@ -511,20 +475,20 @@ HasWeight returns a boolean if a field has been set.
 
 ### GetValidationMinimum
 
-`func (o *CustomField) GetValidationMinimum() int64`
+`func (o *CustomField) GetValidationMinimum() int32`
 
 GetValidationMinimum returns the ValidationMinimum field if non-nil, zero value otherwise.
 
 ### GetValidationMinimumOk
 
-`func (o *CustomField) GetValidationMinimumOk() (*int64, bool)`
+`func (o *CustomField) GetValidationMinimumOk() (*int32, bool)`
 
 GetValidationMinimumOk returns a tuple with the ValidationMinimum field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetValidationMinimum
 
-`func (o *CustomField) SetValidationMinimum(v int64)`
+`func (o *CustomField) SetValidationMinimum(v int32)`
 
 SetValidationMinimum sets ValidationMinimum field to given value.
 
@@ -546,20 +510,20 @@ HasValidationMinimum returns a boolean if a field has been set.
 UnsetValidationMinimum ensures that no value is present for ValidationMinimum, not even an explicit nil
 ### GetValidationMaximum
 
-`func (o *CustomField) GetValidationMaximum() int64`
+`func (o *CustomField) GetValidationMaximum() int32`
 
 GetValidationMaximum returns the ValidationMaximum field if non-nil, zero value otherwise.
 
 ### GetValidationMaximumOk
 
-`func (o *CustomField) GetValidationMaximumOk() (*int64, bool)`
+`func (o *CustomField) GetValidationMaximumOk() (*int32, bool)`
 
 GetValidationMaximumOk returns a tuple with the ValidationMaximum field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetValidationMaximum
 
-`func (o *CustomField) SetValidationMaximum(v int64)`
+`func (o *CustomField) SetValidationMaximum(v int32)`
 
 SetValidationMaximum sets ValidationMaximum field to given value.
 
@@ -629,16 +593,6 @@ SetChoiceSet sets ChoiceSet field to given value.
 
 HasChoiceSet returns a boolean if a field has been set.
 
-### SetChoiceSetNil
-
-`func (o *CustomField) SetChoiceSetNil(b bool)`
-
- SetChoiceSetNil sets the value for ChoiceSet to be an explicit nil
-
-### UnsetChoiceSet
-`func (o *CustomField) UnsetChoiceSet()`
-
-UnsetChoiceSet ensures that no value is present for ChoiceSet, not even an explicit nil
 ### GetCreated
 
 `func (o *CustomField) GetCreated() time.Time`

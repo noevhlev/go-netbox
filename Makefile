@@ -2,7 +2,7 @@
 IS_DARWIN := $(filter Darwin,$(shell uname -s))
 
 define set_env
-	sed $(if $(IS_DARWIN),-i "",-i) -e "s/^#*\($(1)=\).*/$(if $(2),,#)\1$(2)/" .env
+	/usr/bin/sed $(if $(IS_DARWIN),-i "",-i) -e "s/^#*\($(1)=\).*/$(if $(2),,#)\1$(2)/" .env
 endef
 
 EXEC := docker compose exec main

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ContentTypes** | **[]string** |  | 
 **Type** | Pointer to [**PatchedWritableCustomFieldRequestType**](PatchedWritableCustomFieldRequestType.md) |  | [optional] 
-**ObjectType** | Pointer to **NullableString** |  | [optional] 
+**ObjectType** | Pointer to **string** |  | [optional] 
 **Name** | **string** | Internal field name | 
 **Label** | Pointer to **string** | Name of the field as displayed to users (if not provided, &#39;the field&#39;s name will be used) | [optional] 
 **GroupName** | Pointer to **string** | Custom fields within the same group will be displayed together | [optional] 
@@ -14,13 +14,12 @@ Name | Type | Description | Notes
 **Required** | Pointer to **bool** | If true, this field is required when creating new objects or editing an existing object. | [optional] 
 **SearchWeight** | Pointer to **int32** | Weighting for search. Lower values are considered more important. Fields with a search weight of zero will be ignored. | [optional] 
 **FilterLogic** | Pointer to [**PatchedWritableCustomFieldRequestFilterLogic**](PatchedWritableCustomFieldRequestFilterLogic.md) |  | [optional] 
-**UiVisible** | Pointer to [**PatchedWritableCustomFieldRequestUiVisible**](PatchedWritableCustomFieldRequestUiVisible.md) |  | [optional] 
-**UiEditable** | Pointer to [**PatchedWritableCustomFieldRequestUiEditable**](PatchedWritableCustomFieldRequestUiEditable.md) |  | [optional] 
+**UiVisibility** | Pointer to [**PatchedWritableCustomFieldRequestUiVisibility**](PatchedWritableCustomFieldRequestUiVisibility.md) |  | [optional] 
 **IsCloneable** | Pointer to **bool** | Replicate this value when cloning objects | [optional] 
 **Default** | Pointer to **interface{}** | Default value for the field (must be a JSON value). Encapsulate strings with double quotes (e.g. \&quot;Foo\&quot;). | [optional] 
 **Weight** | Pointer to **int32** | Fields with higher weights appear lower in a form. | [optional] 
-**ValidationMinimum** | Pointer to **NullableInt64** | Minimum allowed value (for numeric fields) | [optional] 
-**ValidationMaximum** | Pointer to **NullableInt64** | Maximum allowed value (for numeric fields) | [optional] 
+**ValidationMinimum** | Pointer to **NullableInt32** | Minimum allowed value (for numeric fields) | [optional] 
+**ValidationMaximum** | Pointer to **NullableInt32** | Maximum allowed value (for numeric fields) | [optional] 
 **ValidationRegex** | Pointer to **string** | Regular expression to enforce on text field values. Use ^ and $ to force matching of entire string. For example, &lt;code&gt;^[A-Z]{3}$&lt;/code&gt; will limit values to exactly three uppercase letters. | [optional] 
 **ChoiceSet** | Pointer to **NullableInt32** |  | [optional] 
 
@@ -113,16 +112,6 @@ SetObjectType sets ObjectType field to given value.
 
 HasObjectType returns a boolean if a field has been set.
 
-### SetObjectTypeNil
-
-`func (o *WritableCustomFieldRequest) SetObjectTypeNil(b bool)`
-
- SetObjectTypeNil sets the value for ObjectType to be an explicit nil
-
-### UnsetObjectType
-`func (o *WritableCustomFieldRequest) UnsetObjectType()`
-
-UnsetObjectType ensures that no value is present for ObjectType, not even an explicit nil
 ### GetName
 
 `func (o *WritableCustomFieldRequest) GetName() string`
@@ -293,55 +282,30 @@ SetFilterLogic sets FilterLogic field to given value.
 
 HasFilterLogic returns a boolean if a field has been set.
 
-### GetUiVisible
+### GetUiVisibility
 
-`func (o *WritableCustomFieldRequest) GetUiVisible() PatchedWritableCustomFieldRequestUiVisible`
+`func (o *WritableCustomFieldRequest) GetUiVisibility() PatchedWritableCustomFieldRequestUiVisibility`
 
-GetUiVisible returns the UiVisible field if non-nil, zero value otherwise.
+GetUiVisibility returns the UiVisibility field if non-nil, zero value otherwise.
 
-### GetUiVisibleOk
+### GetUiVisibilityOk
 
-`func (o *WritableCustomFieldRequest) GetUiVisibleOk() (*PatchedWritableCustomFieldRequestUiVisible, bool)`
+`func (o *WritableCustomFieldRequest) GetUiVisibilityOk() (*PatchedWritableCustomFieldRequestUiVisibility, bool)`
 
-GetUiVisibleOk returns a tuple with the UiVisible field if it's non-nil, zero value otherwise
+GetUiVisibilityOk returns a tuple with the UiVisibility field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUiVisible
+### SetUiVisibility
 
-`func (o *WritableCustomFieldRequest) SetUiVisible(v PatchedWritableCustomFieldRequestUiVisible)`
+`func (o *WritableCustomFieldRequest) SetUiVisibility(v PatchedWritableCustomFieldRequestUiVisibility)`
 
-SetUiVisible sets UiVisible field to given value.
+SetUiVisibility sets UiVisibility field to given value.
 
-### HasUiVisible
+### HasUiVisibility
 
-`func (o *WritableCustomFieldRequest) HasUiVisible() bool`
+`func (o *WritableCustomFieldRequest) HasUiVisibility() bool`
 
-HasUiVisible returns a boolean if a field has been set.
-
-### GetUiEditable
-
-`func (o *WritableCustomFieldRequest) GetUiEditable() PatchedWritableCustomFieldRequestUiEditable`
-
-GetUiEditable returns the UiEditable field if non-nil, zero value otherwise.
-
-### GetUiEditableOk
-
-`func (o *WritableCustomFieldRequest) GetUiEditableOk() (*PatchedWritableCustomFieldRequestUiEditable, bool)`
-
-GetUiEditableOk returns a tuple with the UiEditable field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUiEditable
-
-`func (o *WritableCustomFieldRequest) SetUiEditable(v PatchedWritableCustomFieldRequestUiEditable)`
-
-SetUiEditable sets UiEditable field to given value.
-
-### HasUiEditable
-
-`func (o *WritableCustomFieldRequest) HasUiEditable() bool`
-
-HasUiEditable returns a boolean if a field has been set.
+HasUiVisibility returns a boolean if a field has been set.
 
 ### GetIsCloneable
 
@@ -430,20 +394,20 @@ HasWeight returns a boolean if a field has been set.
 
 ### GetValidationMinimum
 
-`func (o *WritableCustomFieldRequest) GetValidationMinimum() int64`
+`func (o *WritableCustomFieldRequest) GetValidationMinimum() int32`
 
 GetValidationMinimum returns the ValidationMinimum field if non-nil, zero value otherwise.
 
 ### GetValidationMinimumOk
 
-`func (o *WritableCustomFieldRequest) GetValidationMinimumOk() (*int64, bool)`
+`func (o *WritableCustomFieldRequest) GetValidationMinimumOk() (*int32, bool)`
 
 GetValidationMinimumOk returns a tuple with the ValidationMinimum field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetValidationMinimum
 
-`func (o *WritableCustomFieldRequest) SetValidationMinimum(v int64)`
+`func (o *WritableCustomFieldRequest) SetValidationMinimum(v int32)`
 
 SetValidationMinimum sets ValidationMinimum field to given value.
 
@@ -465,20 +429,20 @@ HasValidationMinimum returns a boolean if a field has been set.
 UnsetValidationMinimum ensures that no value is present for ValidationMinimum, not even an explicit nil
 ### GetValidationMaximum
 
-`func (o *WritableCustomFieldRequest) GetValidationMaximum() int64`
+`func (o *WritableCustomFieldRequest) GetValidationMaximum() int32`
 
 GetValidationMaximum returns the ValidationMaximum field if non-nil, zero value otherwise.
 
 ### GetValidationMaximumOk
 
-`func (o *WritableCustomFieldRequest) GetValidationMaximumOk() (*int64, bool)`
+`func (o *WritableCustomFieldRequest) GetValidationMaximumOk() (*int32, bool)`
 
 GetValidationMaximumOk returns a tuple with the ValidationMaximum field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetValidationMaximum
 
-`func (o *WritableCustomFieldRequest) SetValidationMaximum(v int64)`
+`func (o *WritableCustomFieldRequest) SetValidationMaximum(v int32)`
 
 SetValidationMaximum sets ValidationMaximum field to given value.
 
