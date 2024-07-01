@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
-**Status** | Pointer to [**ModuleStatus**](ModuleStatus.md) |  | [optional] 
+**Status** | Pointer to [**VirtualMachineWithConfigContextStatus**](VirtualMachineWithConfigContextStatus.md) |  | [optional] 
 **Site** | Pointer to [**NullableNestedSite**](NestedSite.md) |  | [optional] 
 **Cluster** | Pointer to [**NullableNestedCluster**](NestedCluster.md) |  | [optional] 
 **Device** | Pointer to [**NullableNestedDevice**](NestedDevice.md) |  | [optional] 
@@ -134,20 +134,20 @@ SetName sets Name field to given value.
 
 ### GetStatus
 
-`func (o *VirtualMachineWithConfigContext) GetStatus() ModuleStatus`
+`func (o *VirtualMachineWithConfigContext) GetStatus() VirtualMachineWithConfigContextStatus`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *VirtualMachineWithConfigContext) GetStatusOk() (*ModuleStatus, bool)`
+`func (o *VirtualMachineWithConfigContext) GetStatusOk() (*VirtualMachineWithConfigContextStatus, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *VirtualMachineWithConfigContext) SetStatus(v ModuleStatus)`
+`func (o *VirtualMachineWithConfigContext) SetStatus(v VirtualMachineWithConfigContextStatus)`
 
 SetStatus sets Status field to given value.
 

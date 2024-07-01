@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **PowerPanel** | [**NestedPowerPanel**](NestedPowerPanel.md) |  | 
 **Rack** | Pointer to [**NullableNestedRack**](NestedRack.md) |  | [optional] 
 **Name** | **string** |  | 
-**Status** | Pointer to [**PowerFeedStatus**](PowerFeedStatus.md) |  | [optional] 
+**Status** | Pointer to [**BGPSessionStatus**](BGPSessionStatus.md) |  | [optional] 
 **Type** | Pointer to [**PowerFeedType**](PowerFeedType.md) |  | [optional] 
 **Supply** | Pointer to [**PowerFeedSupply**](PowerFeedSupply.md) |  | [optional] 
 **Phase** | Pointer to [**PowerFeedPhase**](PowerFeedPhase.md) |  | [optional] 
@@ -190,20 +190,20 @@ SetName sets Name field to given value.
 
 ### GetStatus
 
-`func (o *PowerFeed) GetStatus() PowerFeedStatus`
+`func (o *PowerFeed) GetStatus() BGPSessionStatus`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *PowerFeed) GetStatusOk() (*PowerFeedStatus, bool)`
+`func (o *PowerFeed) GetStatusOk() (*BGPSessionStatus, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *PowerFeed) SetStatus(v PowerFeedStatus)`
+`func (o *PowerFeed) SetStatus(v BGPSessionStatus)`
 
 SetStatus sets Status field to given value.
 

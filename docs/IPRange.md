@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **Size** | **int32** |  | [readonly] 
 **Vrf** | Pointer to [**NullableNestedVRF**](NestedVRF.md) |  | [optional] 
 **Tenant** | Pointer to [**NullableNestedTenant**](NestedTenant.md) |  | [optional] 
-**Status** | Pointer to [**IPRangeStatus**](IPRangeStatus.md) |  | [optional] 
+**Status** | Pointer to [**CommunityStatus**](CommunityStatus.md) |  | [optional] 
 **Role** | Pointer to [**NullableNestedRole**](NestedRole.md) |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
@@ -254,20 +254,20 @@ HasTenant returns a boolean if a field has been set.
 UnsetTenant ensures that no value is present for Tenant, not even an explicit nil
 ### GetStatus
 
-`func (o *IPRange) GetStatus() IPRangeStatus`
+`func (o *IPRange) GetStatus() CommunityStatus`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *IPRange) GetStatusOk() (*IPRangeStatus, bool)`
+`func (o *IPRange) GetStatusOk() (*CommunityStatus, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *IPRange) SetStatus(v IPRangeStatus)`
+`func (o *IPRange) SetStatus(v CommunityStatus)`
 
 SetStatus sets Status field to given value.
 

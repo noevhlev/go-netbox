@@ -3,9 +3,9 @@
 ## Enum
 
 
-* `PLANNED` (value: `"Planned"`)
+* `AVAILABLE` (value: `"Available"`)
 
-* `STAGING` (value: `"Staging"`)
+* `RESERVED` (value: `"Reserved"`)
 
 * `ACTIVE` (value: `"Active"`)
 

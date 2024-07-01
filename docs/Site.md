@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Display** | **string** |  | [readonly] 
 **Name** | **string** | Full name of the site | 
 **Slug** | **string** |  | 
-**Status** | Pointer to [**LocationStatus**](LocationStatus.md) |  | [optional] 
+**Status** | Pointer to [**SiteStatus**](SiteStatus.md) |  | [optional] 
 **Region** | Pointer to [**NullableNestedRegion**](NestedRegion.md) |  | [optional] 
 **Group** | Pointer to [**NullableNestedSiteGroup**](NestedSiteGroup.md) |  | [optional] 
 **Tenant** | Pointer to [**NullableNestedTenant**](NestedTenant.md) |  | [optional] 
@@ -154,20 +154,20 @@ SetSlug sets Slug field to given value.
 
 ### GetStatus
 
-`func (o *Site) GetStatus() LocationStatus`
+`func (o *Site) GetStatus() SiteStatus`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *Site) GetStatusOk() (*LocationStatus, bool)`
+`func (o *Site) GetStatusOk() (*SiteStatus, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *Site) SetStatus(v LocationStatus)`
+`func (o *Site) SetStatus(v SiteStatus)`
 
 SetStatus sets Status field to given value.
 

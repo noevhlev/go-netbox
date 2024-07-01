@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | 
-**Status** | Pointer to [**ModuleStatusValue**](ModuleStatusValue.md) |  | [optional] 
+**Status** | Pointer to [**PatchedWritableVirtualMachineWithConfigContextRequestStatus**](PatchedWritableVirtualMachineWithConfigContextRequestStatus.md) |  | [optional] 
 **Site** | Pointer to [**NullableNestedSiteRequest**](NestedSiteRequest.md) |  | [optional] 
 **Cluster** | Pointer to [**NullableNestedClusterRequest**](NestedClusterRequest.md) |  | [optional] 
 **Device** | Pointer to [**NullableNestedDeviceRequest**](NestedDeviceRequest.md) |  | [optional] 
@@ -65,20 +65,20 @@ SetName sets Name field to given value.
 
 ### GetStatus
 
-`func (o *VirtualMachineWithConfigContextRequest) GetStatus() ModuleStatusValue`
+`func (o *VirtualMachineWithConfigContextRequest) GetStatus() PatchedWritableVirtualMachineWithConfigContextRequestStatus`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *VirtualMachineWithConfigContextRequest) GetStatusOk() (*ModuleStatusValue, bool)`
+`func (o *VirtualMachineWithConfigContextRequest) GetStatusOk() (*PatchedWritableVirtualMachineWithConfigContextRequestStatus, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *VirtualMachineWithConfigContextRequest) SetStatus(v ModuleStatusValue)`
+`func (o *VirtualMachineWithConfigContextRequest) SetStatus(v PatchedWritableVirtualMachineWithConfigContextRequestStatus)`
 
 SetStatus sets Status field to given value.
 

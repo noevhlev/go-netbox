@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **EndAddress** | **string** |  | 
 **Vrf** | Pointer to [**NullableNestedVRFRequest**](NestedVRFRequest.md) |  | [optional] 
 **Tenant** | Pointer to [**NullableNestedTenantRequest**](NestedTenantRequest.md) |  | [optional] 
-**Status** | Pointer to [**IPRangeStatusValue**](IPRangeStatusValue.md) |  | [optional] 
+**Status** | Pointer to [**CommunityStatusValue**](CommunityStatusValue.md) |  | [optional] 
 **Role** | Pointer to [**NullableNestedRoleRequest**](NestedRoleRequest.md) |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
@@ -147,20 +147,20 @@ HasTenant returns a boolean if a field has been set.
 UnsetTenant ensures that no value is present for Tenant, not even an explicit nil
 ### GetStatus
 
-`func (o *IPRangeRequest) GetStatus() IPRangeStatusValue`
+`func (o *IPRangeRequest) GetStatus() CommunityStatusValue`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *IPRangeRequest) GetStatusOk() (*IPRangeStatusValue, bool)`
+`func (o *IPRangeRequest) GetStatusOk() (*CommunityStatusValue, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *IPRangeRequest) SetStatus(v IPRangeStatusValue)`
+`func (o *IPRangeRequest) SetStatus(v CommunityStatusValue)`
 
 SetStatus sets Status field to given value.
 

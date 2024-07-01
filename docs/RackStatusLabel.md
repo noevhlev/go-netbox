@@ -3,11 +3,13 @@
 ## Enum
 
 
-* `RESERVED` (value: `"Reserved"`)
-
 * `AVAILABLE` (value: `"Available"`)
 
-* `PLANNED` (value: `"Planned"`)
+* `RESERVED` (value: `"Reserved"`)
+
+* `PAID_RESERVE` (value: `"Paid Reserve"`)
+
+* `PREPARING` (value: `"Preparing"`)
 
 * `ACTIVE` (value: `"Active"`)
 

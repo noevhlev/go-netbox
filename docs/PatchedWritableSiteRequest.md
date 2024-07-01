@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | Full name of the site | [optional] 
 **Slug** | Pointer to **string** |  | [optional] 
-**Status** | Pointer to [**LocationStatusValue**](LocationStatusValue.md) |  | [optional] 
+**Status** | Pointer to [**PatchedWritableSiteRequestStatus**](PatchedWritableSiteRequestStatus.md) |  | [optional] 
 **Region** | Pointer to **NullableInt32** |  | [optional] 
 **Group** | Pointer to **NullableInt32** |  | [optional] 
 **Tenant** | Pointer to **NullableInt32** |  | [optional] 
@@ -93,20 +93,20 @@ HasSlug returns a boolean if a field has been set.
 
 ### GetStatus
 
-`func (o *PatchedWritableSiteRequest) GetStatus() LocationStatusValue`
+`func (o *PatchedWritableSiteRequest) GetStatus() PatchedWritableSiteRequestStatus`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *PatchedWritableSiteRequest) GetStatusOk() (*LocationStatusValue, bool)`
+`func (o *PatchedWritableSiteRequest) GetStatusOk() (*PatchedWritableSiteRequestStatus, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *PatchedWritableSiteRequest) SetStatus(v LocationStatusValue)`
+`func (o *PatchedWritableSiteRequest) SetStatus(v PatchedWritableSiteRequestStatus)`
 
 SetStatus sets Status field to given value.
 

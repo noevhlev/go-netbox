@@ -5,7 +5,7 @@
 
 * `PLANNED` (value: `"planned"`)
 
-* `STAGING` (value: `"staging"`)
+* `STAGED` (value: `"staged"`)
 
 * `ACTIVE` (value: `"active"`)
 

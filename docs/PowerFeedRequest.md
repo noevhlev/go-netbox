@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **PowerPanel** | [**NestedPowerPanelRequest**](NestedPowerPanelRequest.md) |  | 
 **Rack** | Pointer to [**NullableNestedRackRequest**](NestedRackRequest.md) |  | [optional] 
 **Name** | **string** |  | 
-**Status** | Pointer to [**PatchedWritablePowerFeedRequestStatus**](PatchedWritablePowerFeedRequestStatus.md) |  | [optional] 
+**Status** | Pointer to [**BGPSessionStatusValue**](BGPSessionStatusValue.md) |  | [optional] 
 **Type** | Pointer to [**PatchedWritablePowerFeedRequestType**](PatchedWritablePowerFeedRequestType.md) |  | [optional] 
 **Supply** | Pointer to [**PatchedWritablePowerFeedRequestSupply**](PatchedWritablePowerFeedRequestSupply.md) |  | [optional] 
 **Phase** | Pointer to [**PatchedWritablePowerFeedRequestPhase**](PatchedWritablePowerFeedRequestPhase.md) |  | [optional] 
@@ -117,20 +117,20 @@ SetName sets Name field to given value.
 
 ### GetStatus
 
-`func (o *PowerFeedRequest) GetStatus() PatchedWritablePowerFeedRequestStatus`
+`func (o *PowerFeedRequest) GetStatus() BGPSessionStatusValue`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *PowerFeedRequest) GetStatusOk() (*PatchedWritablePowerFeedRequestStatus, bool)`
+`func (o *PowerFeedRequest) GetStatusOk() (*BGPSessionStatusValue, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *PowerFeedRequest) SetStatus(v PatchedWritablePowerFeedRequestStatus)`
+`func (o *PowerFeedRequest) SetStatus(v BGPSessionStatusValue)`
 
 SetStatus sets Status field to given value.
 
